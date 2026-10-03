@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - "badges/**"
+      - "revocations/**"
+      - "keys/**"
 
 permissions:
   contents: read

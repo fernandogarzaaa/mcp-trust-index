@@ -30,10 +30,18 @@ td.server { font-weight: 600; }
 .pill-medium { background: #fff3cd; color: #856404; }
 .pill-high { background: #f8d7da; color: #721c24; }
 .pill-critical { background: #721c24; color: #fff; }
+.status { display: inline-block; padding: 0.15rem 0.6rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; white-space: nowrap; }
+.status-active { background: #d4edda; color: #155724; }
+.status-superseded { background: #fff3cd; color: #856404; }
+.status-revoked { background: #721c24; color: #fff; }
+tr[data-status="revoked"] td.server { text-decoration: line-through; }
 @media (prefers-color-scheme: dark) {
   .pill-low { background: #1c3a24; color: #9fe8b4; }
   .pill-medium { background: #3a2f12; color: #ffe08a; }
   .pill-high { background: #3d1518; color: #ff9aa2; }
+  .status-active { background: #1c3a24; color: #9fe8b4; }
+  .status-superseded { background: #3a2f12; color: #ffe08a; }
+  .status-revoked { background: #3d1518; color: #ff9aa2; }
 }
 #detail { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 10; }
 #detail.open { display: block; }
@@ -84,6 +92,7 @@ trustscan scan ./my-server --sign --publish</pre>
         <th data-sort="server">Server</th>
         <th data-sort="version">Version</th>
         <th data-sort="riskScore">Risk</th>
+        <th data-sort="status">Status</th>
         <th>Schema</th>
         <th>Conform</th>
         <th>Robust</th>
@@ -95,10 +104,11 @@ trustscan scan ./my-server --sign --publish</pre>
     <tbody id="rows">
 <!-- BADGES:START -->
 <!-- BADGE-COUNT:1 -->
-    <tr data-path="badges/fixture-server/0.1.0.json" data-server="fixture-server" data-version="0.1.0" data-level="critical" data-score="0">
+    <tr data-path="badges/fixture-server/0.1.0.json" data-server="fixture-server" data-version="0.1.0" data-level="critical" data-score="0" data-status="active">
       <td class="server">fixture-server</td>
       <td><code>0.1.0</code></td>
       <td><span class="pill pill-critical">0/100 critical</span></td>
+      <td><span class="status status-active">active</span></td>
       <td>—</td>
       <td>—</td>
       <td>—</td>
@@ -144,13 +154,19 @@ trustscan scan ./my-server --sign --publish</pre>
   function scoreCell(v) {
     return "<td>" + (typeof v === "number" ? v : "—") + "</td>";
   }
+  function statusPill(e) {
+    var s = e.status || "active";
+    var title = s === "revoked" && e.revocationReason ? ' title="' + esc(e.revocationReason) + '"' : "";
+    return '<span class="status status-' + esc(s) + '"' + title + ">" + esc(s) + "</span>";
+  }
   function rowHtml(e) {
     var fc = e.findingCounts;
     return (
-      '<tr data-path="' + esc(e.path) + '">' +
+      '<tr data-path="' + esc(e.path) + '" data-status="' + esc(e.status || "active") + '">' +
       '<td class="server">' + esc(e.server) + "</td>" +
       "<td><code>" + esc(e.version) + "</code></td>" +
       "<td>" + pill(e) + "</td>" +
+      "<td>" + statusPill(e) + "</td>" +
       scoreCell(e.scores && e.scores.schemaQuality) +
       scoreCell(e.scores && e.scores.conformance) +
       scoreCell(e.scores && e.scores.robustness) +
@@ -179,7 +195,7 @@ trustscan scan ./my-server --sign --publish</pre>
     var list = filtered();
     rowsEl.innerHTML = list.length
       ? list.map(rowHtml).join("")
-      : '<tr><td colspan="9" class="empty">No badges match.</td></tr>';
+      : '<tr><td colspan="10" class="empty">No badges match.</td></tr>';
     showingEl.textContent = "showing " + list.length + " of " + all.length;
   }
   function openDetail(path) {
@@ -189,11 +205,19 @@ trustscan scan ./my-server --sign --publish</pre>
     var fc = e.findingCounts;
     detailBody.innerHTML =
       "<h2>" + esc(e.server) + " <code>" + esc(e.version) + "</code></h2>" +
-      "<p>" + pill(e) + "</p>" +
+      "<p>" + pill(e) + " " + statusPill(e) + "</p>" +
+      (e.status === "revoked" && e.revocationReason
+        ? '<p class="revoked-reason"><strong>Revoked:</strong> ' + esc(e.revocationReason) + "</p>"
+        : "") +
       '<dl class="kv">' +
       "<dt>Risk score</dt><dd>" + e.riskScore + "/100 (" + esc(e.riskLevel) + ")</dd>" +
+      "<dt>Status</dt><dd>" + esc(e.status || "active") + "</dd>" +
       "<dt>Findings</dt><dd>" + fc.critical + " critical, " + fc.major + " major, " + fc.minor + " minor, " + fc.info + " info</dd>" +
       "<dt>Behavioral scores</dt><dd>" + (e.scores ? esc(JSON.stringify(e.scores)) : "behavioral pass was skipped") + "</dd>" +
+      (e.artifact && e.artifact.type === "npm"
+        ? "<dt>Install</dt><dd><code>npm install -g &quot;" + esc(e.artifact.spec) + "&quot;</code>" +
+          (e.artifact.integrity ? "<br>integrity: <code>" + esc(e.artifact.integrity) + "</code>" : "") + "</dd>"
+        : "") +
       "<dt>Signer key</dt><dd><code>" + esc(e.keyId) + "</code></dd>" +
       "<dt>Issued</dt><dd>" + esc(e.issuedAt) + "</dd>" +
       "</dl>" +
