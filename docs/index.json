@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T16:50:21.820Z",
+  "generatedAt": "2026-10-03T16:56:09.930Z",
   "count": 1,
   "badges": [
     {
@@ -22,7 +22,8 @@
       "issuedAt": "2026-10-03T16:18:26.641Z",
       "artifact": null,
       "path": "badges/fixture-server/0.1.0.json",
-      "status": "active"
+      "status": "revoked",
+      "revocationReason": "Demo badge signed with a throwaway test key; revoked to demonstrate the revocation lifecycle."
     }
   ]
 }
