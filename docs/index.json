@@ -1,7 +1,185 @@
 {
-  "generatedAt": "2026-10-03T16:56:09.930Z",
-  "count": 1,
+  "generatedAt": "2026-10-03T17:23:53.674Z",
+  "count": 8,
   "badges": [
+    {
+      "server": "@modelcontextprotocol/server-brave-search",
+      "version": "0.6.2",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:06:02.639Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@modelcontextprotocol/server-brave-search@0.6.2",
+        "integrity": "sha512-AtdnPh8zVsEooXWZD21Negz3JL6iRmKf4sUtwCrLe0e83QBJD6Hf5B3rOFkwsrnTew/6xL7oyRkhc6YuXhuuhQ=="
+      },
+      "path": "badges/modelcontextprotocol-server-brave-search/0.6.2.json",
+      "status": "active"
+    },
+    {
+      "server": "@modelcontextprotocol/server-everything",
+      "version": "2026.8.31",
+      "riskScore": 83,
+      "riskLevel": "medium",
+      "scores": {
+        "mcp.schemaQuality": 99,
+        "mcp.robustness": 88,
+        "mcp.conformance": 96
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 1,
+        "minor": 1,
+        "info": 1
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:05:56.593Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@modelcontextprotocol/server-everything@2026.8.31",
+        "integrity": "sha512-5U3OZh8Xq0Li4nA26l6uNvV9/1suMDuWSn+NjLZIhzinhMY6N3A4DCrxVecBGPf2PsNFKTEv5krxGPRwzxc7jQ=="
+      },
+      "path": "badges/modelcontextprotocol-server-everything/2026.8.31.json",
+      "status": "active"
+    },
+    {
+      "server": "@modelcontextprotocol/server-filesystem",
+      "version": "2026.8.31",
+      "riskScore": 84,
+      "riskLevel": "medium",
+      "scores": {
+        "mcp.schemaQuality": 88,
+        "mcp.robustness": 100,
+        "mcp.conformance": 96
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 1,
+        "info": 12
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:05:15.799Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@modelcontextprotocol/server-filesystem@2026.8.31",
+        "integrity": "sha512-kKaFkyAh6oipvc9+EAbJ552JafnMnOq5nzmzWkp1jJdBhTAAGpmIpWihUG1+rfNhmEFM98gUZDdCHCDD4v6a7Q=="
+      },
+      "path": "badges/modelcontextprotocol-server-filesystem/2026.8.31.json",
+      "status": "active"
+    },
+    {
+      "server": "@modelcontextprotocol/server-github",
+      "version": "2025.4.8",
+      "riskScore": 65,
+      "riskLevel": "high",
+      "scores": {
+        "mcp.schemaQuality": 65,
+        "mcp.robustness": 100,
+        "mcp.conformance": 100
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 35
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:06:09.845Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@modelcontextprotocol/server-github@2025.4.8",
+        "integrity": "sha512-8N43bQw9MlUB0piTZHK2JMh8kYPKxH57d4Z7Wb8PS4by2MkZ0FzI5xPImg3xumpev82VZw2VWHQJJJYp+WkwEw=="
+      },
+      "path": "badges/modelcontextprotocol-server-github/2025.4.8.json",
+      "status": "active"
+    },
+    {
+      "server": "@modelcontextprotocol/server-memory",
+      "version": "2026.8.31",
+      "riskScore": 92,
+      "riskLevel": "low",
+      "scores": {
+        "mcp.schemaQuality": 96,
+        "mcp.robustness": 100,
+        "mcp.conformance": 96
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 1,
+        "info": 4
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:05:24.998Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@modelcontextprotocol/server-memory@2026.8.31",
+        "integrity": "sha512-ljj/3S4aGjxdNSQWw6gucKKGnTLdBPWxzapyY/MT2tOVyZwvxChvevXSLPwx59nKJAlVpUVW+cOlnVRXRwiqMQ=="
+      },
+      "path": "badges/modelcontextprotocol-server-memory/2026.8.31.json",
+      "status": "active"
+    },
+    {
+      "server": "@modelcontextprotocol/server-puppeteer",
+      "version": "2025.5.12",
+      "riskScore": 89,
+      "riskLevel": "medium",
+      "scores": {
+        "mcp.schemaQuality": 89,
+        "mcp.robustness": 100,
+        "mcp.conformance": 100
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 1,
+        "info": 7
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:06:21.132Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@modelcontextprotocol/server-puppeteer@2025.5.12",
+        "integrity": "sha512-uG5QIxnnAkL6m7snXcsgC3k8ZnkYlikYZN016re6TEwtXwKUoJjRMzsqbwqw45IqP+7pXvN9vuPJ/OuHu70jow=="
+      },
+      "path": "badges/modelcontextprotocol-server-puppeteer/2025.5.12.json",
+      "status": "active"
+    },
+    {
+      "server": "@modelcontextprotocol/server-sequential-thinking",
+      "version": "2026.8.31",
+      "riskScore": 92,
+      "riskLevel": "low",
+      "scores": {
+        "mcp.schemaQuality": 96,
+        "mcp.robustness": 100,
+        "mcp.conformance": 96
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 2,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:05:36.618Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@modelcontextprotocol/server-sequential-thinking@2026.8.31",
+        "integrity": "sha512-/EMH++1j2e+VmHwpibw1IUPHxA0tcQY09Yo5/OIPwW/8irEKLAufJNGSZQhCK18n8TUvV6WwZyQOuaDKxe/CeQ=="
+      },
+      "path": "badges/modelcontextprotocol-server-sequential-thinking/2026.8.31.json",
+      "status": "active"
+    },
     {
       "server": "fixture-server",
       "version": "0.1.0",
