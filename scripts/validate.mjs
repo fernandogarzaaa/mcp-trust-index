@@ -314,8 +314,9 @@ function readMaintainerKey(base, fromWorkingTree) {
 
 /** Verify a revocation's signature against the maintainer key. */
 function verifyRevocationSignature(rev, maintainerKey) {
-	const embedded = JSON.stringify(rev.publicKey);
-	const expected = JSON.stringify(maintainerKey.publicKey);
+	// Compare canonically: JSON key order is not significant.
+	const embedded = canonicalize(rev.publicKey);
+	const expected = canonicalize(maintainerKey.publicKey);
 	if (rev.keyId !== maintainerKey.keyId || embedded !== expected) {
 		return {
 			ok: false,
