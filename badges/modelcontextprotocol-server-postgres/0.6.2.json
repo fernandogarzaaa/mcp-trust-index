@@ -1,0 +1,28 @@
+{
+  "type": "mcp-trust-badge/v1",
+  "server": "@modelcontextprotocol/server-postgres",
+  "version": "0.6.2",
+  "riskScore": 100,
+  "riskLevel": "low",
+  "scores": null,
+  "findingCounts": {
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "info": 0
+  },
+  "evalHash": "567327f08b4d00933c676086074482516cc63ff772f9520d9954aa4ba9bebef5",
+  "keyId": "ac22e8d7e54463b7",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "uiN22n7I1Xe84cVLawFhOd5sc9iVWMApfuADBqyJAV0",
+    "kty": "OKP"
+  },
+  "issuedAt": "2026-10-03T17:08:21.175Z",
+  "artifact": {
+    "type": "npm",
+    "spec": "@modelcontextprotocol/server-postgres@0.6.2",
+    "integrity": "sha512-ukbVmVxLAsdZ5pTVWbhf9fc7lqkSf7XqizNH8XAotI21GnRPtkqO+WLWpeBFU+/2Fyv63uXS7/9NnR8Y8wOP1Q=="
+  },
+  "signature": "0HZTkWbWZS3LMScW+cxcfo1sOA4RFD36GthyI8FgGXWcZjhCEH6zpme87NuIejmZFyOg034yhtl7r3AVm/1gAQ=="
+}

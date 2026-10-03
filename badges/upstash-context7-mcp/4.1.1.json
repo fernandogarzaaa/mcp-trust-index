@@ -1,0 +1,32 @@
+{
+  "type": "mcp-trust-badge/v1",
+  "server": "@upstash/context7-mcp",
+  "version": "4.1.1",
+  "riskScore": 100,
+  "riskLevel": "low",
+  "scores": {
+    "mcp.schemaQuality": 100,
+    "mcp.robustness": 100,
+    "mcp.conformance": 100
+  },
+  "findingCounts": {
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "info": 0
+  },
+  "evalHash": "f9af862ceb48fe503407eb93af68c4981281672dba90f3750d881180e085ec17",
+  "keyId": "ac22e8d7e54463b7",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "uiN22n7I1Xe84cVLawFhOd5sc9iVWMApfuADBqyJAV0",
+    "kty": "OKP"
+  },
+  "issuedAt": "2026-10-03T17:10:10.415Z",
+  "artifact": {
+    "type": "npm",
+    "spec": "@upstash/context7-mcp@4.1.1",
+    "integrity": "sha512-fUARTIZGVKzlzQKDhKUg4aIQ3yEU/12STdfxJDDnLMSN7yyHiPvNHI05iFwxkv3vC8G76Wp27MwK6Jucl/C5pA=="
+  },
+  "signature": "LW8H1EkJExXu0O73+GpNWMbRjWtdMaknED0y2emLmOabwsuI9448+XNmVDDtP4+bz3jef3ijX9mkK+7BlpkqAA=="
+}

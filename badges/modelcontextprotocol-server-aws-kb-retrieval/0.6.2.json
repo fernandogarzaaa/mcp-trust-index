@@ -1,0 +1,32 @@
+{
+  "type": "mcp-trust-badge/v1",
+  "server": "@modelcontextprotocol/server-aws-kb-retrieval",
+  "version": "0.6.2",
+  "riskScore": 91,
+  "riskLevel": "low",
+  "scores": {
+    "mcp.schemaQuality": 99,
+    "mcp.robustness": 96,
+    "mcp.conformance": 96
+  },
+  "findingCounts": {
+    "critical": 0,
+    "major": 0,
+    "minor": 2,
+    "info": 1
+  },
+  "evalHash": "b19615c9b42f723da14059ddd0dca099ae3f126f0fb1e3c64b899114a5bd5cd9",
+  "keyId": "ac22e8d7e54463b7",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "uiN22n7I1Xe84cVLawFhOd5sc9iVWMApfuADBqyJAV0",
+    "kty": "OKP"
+  },
+  "issuedAt": "2026-10-03T17:08:50.899Z",
+  "artifact": {
+    "type": "npm",
+    "spec": "@modelcontextprotocol/server-aws-kb-retrieval@0.6.2",
+    "integrity": "sha512-K/KOV6AW7KANDkhJLPqX6LcTRxtGDodHIp73dfwLbaoFgsel5c02fUSx+BO900g8V6vAouY5ZaNQmhBp7vQxnA=="
+  },
+  "signature": "3lr+q83WNd/xbFg+Rgf9ikVYf6/2QM0cAw64kpHCMntX6sJMDKJJGD5Cu/S3REir9n0Fm/ovGxQi3BFE68QMCg=="
+}
