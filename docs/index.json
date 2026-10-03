@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-03T17:25:36.024Z",
-  "count": 15,
+  "generatedAt": "2026-10-03T17:27:04.660Z",
+  "count": 22,
   "badges": [
     {
       "server": "@modelcontextprotocol/server-aws-kb-retrieval",
@@ -295,6 +295,32 @@
       "status": "active"
     },
     {
+      "server": "@notionhq/notion-mcp-server",
+      "version": "2.5.2",
+      "riskScore": 82,
+      "riskLevel": "medium",
+      "scores": {
+        "mcp.schemaQuality": 88,
+        "mcp.robustness": 100,
+        "mcp.conformance": 100
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 1,
+        "info": 14
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:15:09.189Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@notionhq/notion-mcp-server@2.5.2",
+        "integrity": "sha512-5nPSwHMnugSGAhSJS5vVIlMao+iTJO9HoWGpCnT8lJNrPy3rZMqs1V/CPiN4MuxF+5EBgRE/f/Tirl6Wfi75Mg=="
+      },
+      "path": "badges/notionhq-notion-mcp-server/2.5.2.json",
+      "status": "active"
+    },
+    {
       "server": "@playwright/mcp",
       "version": "0.0.83",
       "riskScore": 84,
@@ -318,6 +344,28 @@
         "integrity": "sha512-oNcl+Ae2/IAjhfPeP46BfIkSakfmprY+aOtkv5MjrQ4lPav4/yNtPhL0iq8SlIM90oApWgBDUxaNKvktazUKOg=="
       },
       "path": "badges/playwright-mcp/0.0.83.json",
+      "status": "active"
+    },
+    {
+      "server": "@stripe/mcp",
+      "version": "0.3.3",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:16:49.582Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@stripe/mcp@0.3.3",
+        "integrity": "sha512-Ra7keWg5GKDQ7RUIDa8L3ClKMsmhsJVAXG2/rYeaICEHjyMHYhD9KL2BWVqOqr1IjQwhnA8qbf+Tnb4x09DLyQ=="
+      },
+      "path": "badges/stripe-mcp/0.3.3.json",
       "status": "active"
     },
     {
@@ -347,6 +395,54 @@
       "status": "active"
     },
     {
+      "server": "exa-mcp",
+      "version": "0.0.7",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:17:27.338Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "exa-mcp@0.0.7",
+        "integrity": "sha512-3GUZAfhg+uL5aAHwNO2TC6q9PNz7FDoDMbxXkoVga26paBGqZveja4SEEbfhNarBww4QLXFwzlDfbx8EwNX85g=="
+      },
+      "path": "badges/exa-mcp/0.0.7.json",
+      "status": "active"
+    },
+    {
+      "server": "firecrawl-mcp",
+      "version": "3.27.3",
+      "riskScore": 79,
+      "riskLevel": "medium",
+      "scores": {
+        "mcp.schemaQuality": 79,
+        "mcp.robustness": 100,
+        "mcp.conformance": 100
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 21
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:14:13.242Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "firecrawl-mcp@3.27.3",
+        "integrity": "sha512-GEbcYIdpUuWWE3Jm3y3fbcQeP393SqyIFPQ5WC/4YYz3riOShoEk8iWWT4rzdrEBLFpBuM7M/Ol04fOVdmslww=="
+      },
+      "path": "badges/firecrawl-mcp/3.27.3.json",
+      "status": "active"
+    },
+    {
       "server": "fixture-server",
       "version": "0.1.0",
       "riskScore": 0,
@@ -368,6 +464,80 @@
       "path": "badges/fixture-server/0.1.0.json",
       "status": "revoked",
       "revocationReason": "Demo badge signed with a throwaway test key; revoked to demonstrate the revocation lifecycle."
+    },
+    {
+      "server": "kubernetes-mcp-server",
+      "version": "0.0.67",
+      "riskScore": 95,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 1,
+        "info": 1
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:17:07.681Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "kubernetes-mcp-server@0.0.67",
+        "integrity": "sha512-+pAaMnXnDueuiqm3nOWSVhBAY9/voqW6bjJajFdVmm9dwWUbszJIUjkHkFq6f4ULlOajifX+PfJLi6ltmZOEfw=="
+      },
+      "path": "badges/kubernetes-mcp-server/0.0.67.json",
+      "status": "active"
+    },
+    {
+      "server": "mcp-server-commands",
+      "version": "0.8.2",
+      "riskScore": 99,
+      "riskLevel": "low",
+      "scores": {
+        "mcp.schemaQuality": 99,
+        "mcp.robustness": 100,
+        "mcp.conformance": 100
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 1
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:17:45.252Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "mcp-server-commands@0.8.2",
+        "integrity": "sha512-GPyqjk1nZuruaTBrCmOX/rVVyElinMs5ISZTJ6TfJrydHaFsUP8evdmYXIh0wRxlI6Rbk+I99cXOSGO5pqDHQg=="
+      },
+      "path": "badges/mcp-server-commands/0.8.2.json",
+      "status": "active"
+    },
+    {
+      "server": "mcp-server-kubernetes",
+      "version": "4.1.9",
+      "riskScore": 77,
+      "riskLevel": "medium",
+      "scores": {
+        "mcp.schemaQuality": 97,
+        "mcp.robustness": 80,
+        "mcp.conformance": 100
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 5,
+        "info": 3
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:12:31.243Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "mcp-server-kubernetes@4.1.9",
+        "integrity": "sha512-9TPqmLKUZwdodozHzWsgZQrRtXbkQUTT424CJxCfZOeGhuIuq7CRij9A+vQbIdAnl6gG1ejqRLqpdqfR4cimtw=="
+      },
+      "path": "badges/mcp-server-kubernetes/4.1.9.json",
+      "status": "active"
     }
   ]
 }
