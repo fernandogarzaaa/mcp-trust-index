@@ -1,5 +1,26 @@
 {
-  "generatedAt": "2026-10-03T16:15:27.025Z",
-  "count": 0,
-  "badges": []
+  "generatedAt": "2026-10-03T16:29:46.289Z",
+  "count": 1,
+  "badges": [
+    {
+      "server": "fixture-server",
+      "version": "0.1.0",
+      "riskScore": 0,
+      "riskLevel": "critical",
+      "scores": {
+        "mcp.schemaQuality": 79,
+        "mcp.robustness": 92,
+        "mcp.conformance": 100
+      },
+      "findingCounts": {
+        "critical": 1,
+        "major": 6,
+        "minor": 6,
+        "info": 3
+      },
+      "keyId": "e1b39068c87ecd81",
+      "issuedAt": "2026-10-03T16:18:26.641Z",
+      "path": "badges/fixture-server/0.1.0.json"
+    }
+  ]
 }
