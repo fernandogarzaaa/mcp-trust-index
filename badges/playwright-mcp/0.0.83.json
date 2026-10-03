@@ -1,0 +1,32 @@
+{
+  "type": "mcp-trust-badge/v1",
+  "server": "@playwright/mcp",
+  "version": "0.0.83",
+  "riskScore": 84,
+  "riskLevel": "medium",
+  "scores": {
+    "mcp.schemaQuality": 88,
+    "mcp.robustness": 100,
+    "mcp.conformance": 96
+  },
+  "findingCounts": {
+    "critical": 0,
+    "major": 0,
+    "minor": 4,
+    "info": 0
+  },
+  "evalHash": "d0383103b3b3296b4887fa4407d48e1dc15c972182b4717cbf8e7608d7e868c5",
+  "keyId": "ac22e8d7e54463b7",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "uiN22n7I1Xe84cVLawFhOd5sc9iVWMApfuADBqyJAV0",
+    "kty": "OKP"
+  },
+  "issuedAt": "2026-10-03T17:09:04.822Z",
+  "artifact": {
+    "type": "npm",
+    "spec": "@playwright/mcp@0.0.83",
+    "integrity": "sha512-oNcl+Ae2/IAjhfPeP46BfIkSakfmprY+aOtkv5MjrQ4lPav4/yNtPhL0iq8SlIM90oApWgBDUxaNKvktazUKOg=="
+  },
+  "signature": "80zKuIlcRLuGRxHugUyj8M6pmtnLyA2QHuYvKNfAurk0yb0cz75tTlNqatxEw4zVVAzJNPLCWXB1y67N7OapAQ=="
+}

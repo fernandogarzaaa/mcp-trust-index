@@ -1,0 +1,28 @@
+{
+  "type": "mcp-trust-badge/v1",
+  "server": "@modelcontextprotocol/server-everart",
+  "version": "0.6.2",
+  "riskScore": 100,
+  "riskLevel": "low",
+  "scores": null,
+  "findingCounts": {
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "info": 0
+  },
+  "evalHash": "567327f08b4d00933c676086074482516cc63ff772f9520d9954aa4ba9bebef5",
+  "keyId": "ac22e8d7e54463b7",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "uiN22n7I1Xe84cVLawFhOd5sc9iVWMApfuADBqyJAV0",
+    "kty": "OKP"
+  },
+  "issuedAt": "2026-10-03T17:06:49.893Z",
+  "artifact": {
+    "type": "npm",
+    "spec": "@modelcontextprotocol/server-everart@0.6.2",
+    "integrity": "sha512-Uz1XW1/16gA6dcwJC5Q6thfj7VrrV2bO9hcs3eE2BTTCqkix+YcDCuDHG+cGuXjcuDbQ7WUvwIzV49Wpe6oWpw=="
+  },
+  "signature": "dcolZ8R/Zs6hiEkOpg0kv2B9mxkQ8BxcmlNDo0DXoDBMRAld0RRrnXXegiydvnV0DrBSWRmctJlY5BSmwj2lDQ=="
+}

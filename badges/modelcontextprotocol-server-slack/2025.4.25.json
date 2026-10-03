@@ -1,0 +1,28 @@
+{
+  "type": "mcp-trust-badge/v1",
+  "server": "@modelcontextprotocol/server-slack",
+  "version": "2025.4.25",
+  "riskScore": 100,
+  "riskLevel": "low",
+  "scores": null,
+  "findingCounts": {
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "info": 0
+  },
+  "evalHash": "567327f08b4d00933c676086074482516cc63ff772f9520d9954aa4ba9bebef5",
+  "keyId": "ac22e8d7e54463b7",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "uiN22n7I1Xe84cVLawFhOd5sc9iVWMApfuADBqyJAV0",
+    "kty": "OKP"
+  },
+  "issuedAt": "2026-10-03T17:08:27.012Z",
+  "artifact": {
+    "type": "npm",
+    "spec": "@modelcontextprotocol/server-slack@2025.4.25",
+    "integrity": "sha512-9WBjnxl4OgYZ1kKBqUmHbd2XVoqtnO9u8kaxSaGb4NAWf2Q4D/LV6FoJUAHPPcvKcB7AQLNJa8KO3yNOcU6fvQ=="
+  },
+  "signature": "xmvTk3GiuVxJmD/zZMFb1HPyZPZ7o7olHQjgdKhag7rsBt38xMeP89VGiXumHYcgEj2ppBqhHIFeIIBLxZ/JAQ=="
+}
