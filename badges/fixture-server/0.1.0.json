@@ -1,0 +1,27 @@
+{
+  "type": "mcp-trust-badge/v1",
+  "server": "fixture-server",
+  "version": "0.1.0",
+  "riskScore": 0,
+  "riskLevel": "critical",
+  "scores": {
+    "mcp.schemaQuality": 79,
+    "mcp.robustness": 92,
+    "mcp.conformance": 100
+  },
+  "findingCounts": {
+    "critical": 1,
+    "major": 6,
+    "minor": 6,
+    "info": 3
+  },
+  "evalHash": "e5f95efbea341dc9e5a3f7dd20f8f44dc48a9cd42f2c19e06e9c19a881ad3387",
+  "keyId": "e1b39068c87ecd81",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "yKlq6eSjp0q9g3X4wgex8Ygh4NFXTqd9YSxsP-xrk8U",
+    "kty": "OKP"
+  },
+  "issuedAt": "2026-10-03T16:18:26.641Z",
+  "signature": "qSoatBsCY0kFMWepM0mOG8XTQiEXcT34CUiZtoD5ERIhnhC82LucPBAMJyPxlNZx3Ae1s8UJaahAw4rHDpVgAg=="
+}
