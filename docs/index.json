@@ -1,7 +1,33 @@
 {
-  "generatedAt": "2026-10-03T17:23:53.674Z",
-  "count": 8,
+  "generatedAt": "2026-10-03T17:25:36.024Z",
+  "count": 15,
   "badges": [
+    {
+      "server": "@modelcontextprotocol/server-aws-kb-retrieval",
+      "version": "0.6.2",
+      "riskScore": 91,
+      "riskLevel": "low",
+      "scores": {
+        "mcp.schemaQuality": 99,
+        "mcp.robustness": 96,
+        "mcp.conformance": 96
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 2,
+        "info": 1
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:08:50.899Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@modelcontextprotocol/server-aws-kb-retrieval@0.6.2",
+        "integrity": "sha512-K/KOV6AW7KANDkhJLPqX6LcTRxtGDodHIp73dfwLbaoFgsel5c02fUSx+BO900g8V6vAouY5ZaNQmhBp7vQxnA=="
+      },
+      "path": "badges/modelcontextprotocol-server-aws-kb-retrieval/0.6.2.json",
+      "status": "active"
+    },
     {
       "server": "@modelcontextprotocol/server-brave-search",
       "version": "0.6.2",
@@ -22,6 +48,28 @@
         "integrity": "sha512-AtdnPh8zVsEooXWZD21Negz3JL6iRmKf4sUtwCrLe0e83QBJD6Hf5B3rOFkwsrnTew/6xL7oyRkhc6YuXhuuhQ=="
       },
       "path": "badges/modelcontextprotocol-server-brave-search/0.6.2.json",
+      "status": "active"
+    },
+    {
+      "server": "@modelcontextprotocol/server-everart",
+      "version": "0.6.2",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:06:49.893Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@modelcontextprotocol/server-everart@0.6.2",
+        "integrity": "sha512-Uz1XW1/16gA6dcwJC5Q6thfj7VrrV2bO9hcs3eE2BTTCqkix+YcDCuDHG+cGuXjcuDbQ7WUvwIzV49Wpe6oWpw=="
+      },
+      "path": "badges/modelcontextprotocol-server-everart/0.6.2.json",
       "status": "active"
     },
     {
@@ -129,6 +177,28 @@
       "status": "active"
     },
     {
+      "server": "@modelcontextprotocol/server-postgres",
+      "version": "0.6.2",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:08:21.175Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@modelcontextprotocol/server-postgres@0.6.2",
+        "integrity": "sha512-ukbVmVxLAsdZ5pTVWbhf9fc7lqkSf7XqizNH8XAotI21GnRPtkqO+WLWpeBFU+/2Fyv63uXS7/9NnR8Y8wOP1Q=="
+      },
+      "path": "badges/modelcontextprotocol-server-postgres/0.6.2.json",
+      "status": "active"
+    },
+    {
       "server": "@modelcontextprotocol/server-puppeteer",
       "version": "2025.5.12",
       "riskScore": 89,
@@ -155,6 +225,28 @@
       "status": "active"
     },
     {
+      "server": "@modelcontextprotocol/server-redis",
+      "version": "2025.4.25",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:08:03.772Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@modelcontextprotocol/server-redis@2025.4.25",
+        "integrity": "sha512-NFOETZVwmRNXSjSWTX4Tn0RIC9Slgypw6pmAqeeELoBn1o7Ox7dryGiBphAjvux1oWvIlx13scMKxmGXZQKTMA=="
+      },
+      "path": "badges/modelcontextprotocol-server-redis/2025.4.25.json",
+      "status": "active"
+    },
+    {
       "server": "@modelcontextprotocol/server-sequential-thinking",
       "version": "2026.8.31",
       "riskScore": 92,
@@ -178,6 +270,80 @@
         "integrity": "sha512-/EMH++1j2e+VmHwpibw1IUPHxA0tcQY09Yo5/OIPwW/8irEKLAufJNGSZQhCK18n8TUvV6WwZyQOuaDKxe/CeQ=="
       },
       "path": "badges/modelcontextprotocol-server-sequential-thinking/2026.8.31.json",
+      "status": "active"
+    },
+    {
+      "server": "@modelcontextprotocol/server-slack",
+      "version": "2025.4.25",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:08:27.012Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@modelcontextprotocol/server-slack@2025.4.25",
+        "integrity": "sha512-9WBjnxl4OgYZ1kKBqUmHbd2XVoqtnO9u8kaxSaGb4NAWf2Q4D/LV6FoJUAHPPcvKcB7AQLNJa8KO3yNOcU6fvQ=="
+      },
+      "path": "badges/modelcontextprotocol-server-slack/2025.4.25.json",
+      "status": "active"
+    },
+    {
+      "server": "@playwright/mcp",
+      "version": "0.0.83",
+      "riskScore": 84,
+      "riskLevel": "medium",
+      "scores": {
+        "mcp.schemaQuality": 88,
+        "mcp.robustness": 100,
+        "mcp.conformance": 96
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 4,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:09:04.822Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@playwright/mcp@0.0.83",
+        "integrity": "sha512-oNcl+Ae2/IAjhfPeP46BfIkSakfmprY+aOtkv5MjrQ4lPav4/yNtPhL0iq8SlIM90oApWgBDUxaNKvktazUKOg=="
+      },
+      "path": "badges/playwright-mcp/0.0.83.json",
+      "status": "active"
+    },
+    {
+      "server": "@upstash/context7-mcp",
+      "version": "4.1.1",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": {
+        "mcp.schemaQuality": 100,
+        "mcp.robustness": 100,
+        "mcp.conformance": 100
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-03T17:10:10.415Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@upstash/context7-mcp@4.1.1",
+        "integrity": "sha512-fUARTIZGVKzlzQKDhKUg4aIQ3yEU/12STdfxJDDnLMSN7yyHiPvNHI05iFwxkv3vC8G76Wp27MwK6Jucl/C5pA=="
+      },
+      "path": "badges/upstash-context7-mcp/4.1.1.json",
       "status": "active"
     },
     {
