@@ -1,0 +1,32 @@
+{
+  "type": "mcp-trust-badge/v1",
+  "server": "@modelcontextprotocol/server-github",
+  "version": "2025.4.8",
+  "riskScore": 65,
+  "riskLevel": "high",
+  "scores": {
+    "mcp.schemaQuality": 65,
+    "mcp.robustness": 100,
+    "mcp.conformance": 100
+  },
+  "findingCounts": {
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "info": 35
+  },
+  "evalHash": "a4716bdfff19dba1ee91ea7163ea568d8589e92c1c945b8f5db7a2740b279cf5",
+  "keyId": "ac22e8d7e54463b7",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "uiN22n7I1Xe84cVLawFhOd5sc9iVWMApfuADBqyJAV0",
+    "kty": "OKP"
+  },
+  "issuedAt": "2026-10-03T17:06:09.845Z",
+  "artifact": {
+    "type": "npm",
+    "spec": "@modelcontextprotocol/server-github@2025.4.8",
+    "integrity": "sha512-8N43bQw9MlUB0piTZHK2JMh8kYPKxH57d4Z7Wb8PS4by2MkZ0FzI5xPImg3xumpev82VZw2VWHQJJJYp+WkwEw=="
+  },
+  "signature": "x3dlLIEFWOVoYAlU/KipDO+OO+u5+f8sYbsU6GaIsGenKTGv/NjeQNOVbNINxq+zmLHbOO6e0Y2ZLQ3RKGJTCA=="
+}

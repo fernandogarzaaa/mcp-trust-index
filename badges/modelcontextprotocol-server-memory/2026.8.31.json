@@ -1,0 +1,32 @@
+{
+  "type": "mcp-trust-badge/v1",
+  "server": "@modelcontextprotocol/server-memory",
+  "version": "2026.8.31",
+  "riskScore": 92,
+  "riskLevel": "low",
+  "scores": {
+    "mcp.schemaQuality": 96,
+    "mcp.robustness": 100,
+    "mcp.conformance": 96
+  },
+  "findingCounts": {
+    "critical": 0,
+    "major": 0,
+    "minor": 1,
+    "info": 4
+  },
+  "evalHash": "7cdb2eb3d1b9d491e915ed07dc8f7b24a7089c0dad20b749918390f27b8b369c",
+  "keyId": "ac22e8d7e54463b7",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "uiN22n7I1Xe84cVLawFhOd5sc9iVWMApfuADBqyJAV0",
+    "kty": "OKP"
+  },
+  "issuedAt": "2026-10-03T17:05:24.998Z",
+  "artifact": {
+    "type": "npm",
+    "spec": "@modelcontextprotocol/server-memory@2026.8.31",
+    "integrity": "sha512-ljj/3S4aGjxdNSQWw6gucKKGnTLdBPWxzapyY/MT2tOVyZwvxChvevXSLPwx59nKJAlVpUVW+cOlnVRXRwiqMQ=="
+  },
+  "signature": "2wXKfg8A43iiVcAwJMi6Nhmdve4xsdUaXOtA4XkDrSIN6tPcagSK/WntSkhwUO0b3yGdng+VAXwFDJqYvmr7CA=="
+}
