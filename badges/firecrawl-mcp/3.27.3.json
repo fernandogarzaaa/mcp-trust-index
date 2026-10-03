@@ -1,0 +1,32 @@
+{
+  "type": "mcp-trust-badge/v1",
+  "server": "firecrawl-mcp",
+  "version": "3.27.3",
+  "riskScore": 79,
+  "riskLevel": "medium",
+  "scores": {
+    "mcp.schemaQuality": 79,
+    "mcp.robustness": 100,
+    "mcp.conformance": 100
+  },
+  "findingCounts": {
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "info": 21
+  },
+  "evalHash": "d04ed0f5c772b7a9c8cd0e093cc67a8dc82e182a03e873190d91f3ddcb725fae",
+  "keyId": "ac22e8d7e54463b7",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "uiN22n7I1Xe84cVLawFhOd5sc9iVWMApfuADBqyJAV0",
+    "kty": "OKP"
+  },
+  "issuedAt": "2026-10-03T17:14:13.242Z",
+  "artifact": {
+    "type": "npm",
+    "spec": "firecrawl-mcp@3.27.3",
+    "integrity": "sha512-GEbcYIdpUuWWE3Jm3y3fbcQeP393SqyIFPQ5WC/4YYz3riOShoEk8iWWT4rzdrEBLFpBuM7M/Ol04fOVdmslww=="
+  },
+  "signature": "Rrd8vow+dXFfVn/I7eFyZPNnKsXdNpJRh6GeCdUcjPx4t1+3oUNYv6DHWM2D2cvII7u8BqjTmmRoUYm7811qDg=="
+}

@@ -1,0 +1,28 @@
+{
+  "type": "mcp-trust-badge/v1",
+  "server": "kubernetes-mcp-server",
+  "version": "0.0.67",
+  "riskScore": 95,
+  "riskLevel": "low",
+  "scores": null,
+  "findingCounts": {
+    "critical": 0,
+    "major": 0,
+    "minor": 1,
+    "info": 1
+  },
+  "evalHash": "1675382dda47371562b9d4a6536c8ed61d6aa1fc239b32acde84857d7fd29982",
+  "keyId": "ac22e8d7e54463b7",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "uiN22n7I1Xe84cVLawFhOd5sc9iVWMApfuADBqyJAV0",
+    "kty": "OKP"
+  },
+  "issuedAt": "2026-10-03T17:17:07.681Z",
+  "artifact": {
+    "type": "npm",
+    "spec": "kubernetes-mcp-server@0.0.67",
+    "integrity": "sha512-+pAaMnXnDueuiqm3nOWSVhBAY9/voqW6bjJajFdVmm9dwWUbszJIUjkHkFq6f4ULlOajifX+PfJLi6ltmZOEfw=="
+  },
+  "signature": "+2HHGfrLtvP+9tjXB+r/YX2xbO5LXiopfoKCRX0MSbfIhI3ayo0I7HFQmmG9hIG+VdIRzi0FqMO6GYffAZJcBA=="
+}

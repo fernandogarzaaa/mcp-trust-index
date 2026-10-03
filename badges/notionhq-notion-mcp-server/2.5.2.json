@@ -1,0 +1,32 @@
+{
+  "type": "mcp-trust-badge/v1",
+  "server": "@notionhq/notion-mcp-server",
+  "version": "2.5.2",
+  "riskScore": 82,
+  "riskLevel": "medium",
+  "scores": {
+    "mcp.schemaQuality": 88,
+    "mcp.robustness": 100,
+    "mcp.conformance": 100
+  },
+  "findingCounts": {
+    "critical": 0,
+    "major": 0,
+    "minor": 1,
+    "info": 14
+  },
+  "evalHash": "a990a5da4610f2357bd831ff33b819d53a276394bfaeaab391cc8c60cd3479eb",
+  "keyId": "ac22e8d7e54463b7",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "uiN22n7I1Xe84cVLawFhOd5sc9iVWMApfuADBqyJAV0",
+    "kty": "OKP"
+  },
+  "issuedAt": "2026-10-03T17:15:09.189Z",
+  "artifact": {
+    "type": "npm",
+    "spec": "@notionhq/notion-mcp-server@2.5.2",
+    "integrity": "sha512-5nPSwHMnugSGAhSJS5vVIlMao+iTJO9HoWGpCnT8lJNrPy3rZMqs1V/CPiN4MuxF+5EBgRE/f/Tirl6Wfi75Mg=="
+  },
+  "signature": "kPa7KzyMOp9iBv6bo2ab3uB0qqIBLSGqkKAAOwflo9+t+tDBcgbEVcc/xjWyZf7sV/xiVdQKV+dSOTgjdtxOCg=="
+}
