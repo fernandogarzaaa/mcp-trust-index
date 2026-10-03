@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mcp-trust index: signed trust badges for MCP servers</title>
+<meta name="description" content="A public, git-backed index of signed trust badges for MCP servers, emitted by trustscan (mcp-trust).">
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; margin: 0; padding: 0 1rem 4rem; max-width: 1100px; margin-inline: auto; line-height: 1.5; }
+header { padding: 2rem 0 1rem; border-bottom: 1px solid #8884; margin-bottom: 1rem; }
+h1 { margin: 0 0 0.25rem; font-size: 1.8rem; }
+.sub { color: #888; margin: 0 0 1rem; }
+code, pre { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.85em; }
+pre { background: #8881; padding: 0.75rem 1rem; border-radius: 8px; overflow-x: auto; }
+.controls { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 1rem 0; align-items: center; }
+.controls input[type="search"] { padding: 0.5rem 0.75rem; border: 1px solid #8886; border-radius: 8px; min-width: 220px; font-size: 1rem; }
+.controls select { padding: 0.5rem; border: 1px solid #8886; border-radius: 8px; font-size: 1rem; }
+table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; font-size: 0.92rem; }
+th, td { text-align: left; padding: 0.55rem 0.6rem; border-bottom: 1px solid #8883; }
+th { cursor: pointer; user-select: none; white-space: nowrap; }
+th:hover { text-decoration: underline; }
+tbody tr[data-path] { cursor: pointer; }
+tbody tr[data-path]:hover { background: #8881; }
+td.server { font-weight: 600; }
+.empty { text-align: center; color: #888; padding: 2rem !important; }
+.pill { display: inline-block; padding: 0.15rem 0.6rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; white-space: nowrap; }
+.pill-low { background: #d4edda; color: #155724; }
+.pill-medium { background: #fff3cd; color: #856404; }
+.pill-high { background: #f8d7da; color: #721c24; }
+.pill-critical { background: #721c24; color: #fff; }
+@media (prefers-color-scheme: dark) {
+  .pill-low { background: #1c3a24; color: #9fe8b4; }
+  .pill-medium { background: #3a2f12; color: #ffe08a; }
+  .pill-high { background: #3d1518; color: #ff9aa2; }
+}
+#detail { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 10; }
+#detail.open { display: block; }
+#detail-card { background: Canvas; color: CanvasText; max-width: 720px; margin: 5vh auto; max-height: 90vh; overflow: auto; border-radius: 12px; padding: 1.5rem; }
+#detail-card h2 { margin-top: 0; }
+#detail-card pre { max-height: 300px; }
+.btn { display: inline-block; padding: 0.4rem 0.9rem; border: 1px solid #8886; border-radius: 8px; background: none; color: inherit; cursor: pointer; font-size: 0.9rem; margin-right: 0.5rem; text-decoration: none; }
+.btn:hover { background: #8882; }
+footer { margin-top: 3rem; color: #888; font-size: 0.85rem; border-top: 1px solid #8884; padding-top: 1rem; }
+.kv { display: grid; grid-template-columns: 140px 1fr; gap: 0.25rem 0.75rem; margin: 1rem 0; font-size: 0.92rem; }
+.kv dt { color: #888; }
+.kv dd { margin: 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>mcp-trust index</h1>
+  <p class="sub">A public, git-backed index of signed trust badges for MCP servers. Every badge is cryptographically verified by CI before it lands here. A badge attests to the exact version scanned, nothing more.</p>
+  <p>
+    <a class="btn" href="https://github.com/fernandogarzaaa/mcp-trust-index">Index repo</a>
+    <a class="btn" href="https://github.com/fernandogarzaaa/mcp-trust">trustscan (mcp-trust)</a>
+  </p>
+</header>
+
+<main>
+  <h2>Publish a badge</h2>
+  <pre>trustscan scan ./my-server --sign --badge-out my-server.trust.json
+trustscan publish --badge my-server.trust.json
+# or one step:
+trustscan scan ./my-server --sign --publish</pre>
+  <p>Publishing opens a pull request against this index. CI verifies the badge's Ed25519 signature and schema before a maintainer merges it.</p>
+
+  <h2>Indexed badges <span id="count"></span></h2>
+  <div class="controls">
+    <input type="search" id="q" placeholder="Search server or version" aria-label="Search badges">
+    <select id="level" aria-label="Filter by risk level">
+      <option value="">All risk levels</option>
+      <option value="low">low</option>
+      <option value="medium">medium</option>
+      <option value="high">high</option>
+      <option value="critical">critical</option>
+    </select>
+    <span id="showing"></span>
+  </div>
+  <table id="badges" aria-label="Indexed trust badges">
+    <thead>
+      <tr>
+        <th data-sort="server">Server</th>
+        <th data-sort="version">Version</th>
+        <th data-sort="riskScore">Risk</th>
+        <th>Schema</th>
+        <th>Conform</th>
+        <th>Robust</th>
+        <th title="critical / major / minor / info">Findings</th>
+        <th>Key</th>
+        <th data-sort="issuedAt">Issued</th>
+      </tr>
+    </thead>
+    <tbody id="rows">
+<!-- BADGES:START -->
+<!-- BADGE-COUNT:0 -->
+    <tr><td colspan="9" class="empty">No badges indexed yet. Publish the first one with <code>trustscan publish</code>.</td></tr>
+<!-- BADGES:END -->
+    </tbody>
+  </table>
+</main>
+
+<div id="detail" role="dialog" aria-modal="true" aria-label="Badge detail">
+  <div id="detail-card">
+    <div id="detail-body"></div>
+    <p><button class="btn" id="detail-close">Close</button></p>
+  </div>
+</div>
+
+<footer>
+  <p>Honest limitations: a badge attests to the exact version scanned at a point in time; a new release needs a new scan. Static checks are heuristics with false positives. Trust in the <em>signer</em> (the key id) is out of band, like a PGP key id: the index proves a badge is intact and well-formed, not that its signer is honest. Verify any badge yourself with <code>trustscan verify badge.json</code>.</p>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var rowsEl = document.getElementById("rows");
+  var qEl = document.getElementById("q");
+  var levelEl = document.getElementById("level");
+  var showingEl = document.getElementById("showing");
+  var countEl = document.getElementById("count");
+  var detailEl = document.getElementById("detail");
+  var detailBody = document.getElementById("detail-body");
+  var all = [];
+  var sortKey = "server", sortDir = 1;
+
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function pill(e) {
+    return '<span class="pill pill-' + esc(e.riskLevel) + '">' + e.riskScore + "/100 " + esc(e.riskLevel) + "</span>";
+  }
+  function scoreCell(v) {
+    return "<td>" + (typeof v === "number" ? v : "—") + "</td>";
+  }
+  function rowHtml(e) {
+    var fc = e.findingCounts;
+    return (
+      '<tr data-path="' + esc(e.path) + '">' +
+      '<td class="server">' + esc(e.server) + "</td>" +
+      "<td><code>" + esc(e.version) + "</code></td>" +
+      "<td>" + pill(e) + "</td>" +
+      scoreCell(e.scores && e.scores.schemaQuality) +
+      scoreCell(e.scores && e.scores.conformance) +
+      scoreCell(e.scores && e.scores.robustness) +
+      '<td title="critical / major / minor / info">' + fc.critical + "/" + fc.major + "/" + fc.minor + "/" + fc.info + "</td>" +
+      '<td><code title="' + esc(e.keyId) + '">' + esc(e.keyId.slice(0, 8)) + "</code></td>" +
+      "<td>" + esc(e.issuedAt.slice(0, 10)) + "</td>" +
+      "</tr>"
+    );
+  }
+  function filtered() {
+    var q = qEl.value.trim().toLowerCase();
+    var level = levelEl.value;
+    var out = all.filter(function (e) {
+      if (level && e.riskLevel !== level) return false;
+      if (q && (e.server + " " + e.version).toLowerCase().indexOf(q) === -1) return false;
+      return true;
+    });
+    out.sort(function (a, b) {
+      var av = a[sortKey], bv = b[sortKey];
+      if (typeof av === "number" && typeof bv === "number") return (av - bv) * sortDir;
+      return String(av).localeCompare(String(bv), undefined, { numeric: true }) * sortDir;
+    });
+    return out;
+  }
+  function render() {
+    var list = filtered();
+    rowsEl.innerHTML = list.length
+      ? list.map(rowHtml).join("")
+      : '<tr><td colspan="9" class="empty">No badges match.</td></tr>';
+    showingEl.textContent = "showing " + list.length + " of " + all.length;
+  }
+  function openDetail(path) {
+    var e = all.find(function (x) { return x.path === path; });
+    if (!e) return;
+    var rawUrl = "https://raw.githubusercontent.com/fernandogarzaaa/mcp-trust-index/main/" + e.path;
+    var fc = e.findingCounts;
+    detailBody.innerHTML =
+      "<h2>" + esc(e.server) + " <code>" + esc(e.version) + "</code></h2>" +
+      "<p>" + pill(e) + "</p>" +
+      '<dl class="kv">' +
+      "<dt>Risk score</dt><dd>" + e.riskScore + "/100 (" + esc(e.riskLevel) + ")</dd>" +
+      "<dt>Findings</dt><dd>" + fc.critical + " critical, " + fc.major + " major, " + fc.minor + " minor, " + fc.info + " info</dd>" +
+      "<dt>Behavioral scores</dt><dd>" + (e.scores ? esc(JSON.stringify(e.scores)) : "behavioral pass was skipped") + "</dd>" +
+      "<dt>Signer key</dt><dd><code>" + esc(e.keyId) + "</code></dd>" +
+      "<dt>Issued</dt><dd>" + esc(e.issuedAt) + "</dd>" +
+      "</dl>" +
+      "<h3>Verify it yourself</h3>" +
+      "<pre>curl -sL " + esc(rawUrl) + " -o badge.json\ntrustscan verify badge.json</pre>" +
+      '<p><a class="btn" href="' + esc(rawUrl) + '" download>Download badge JSON</a>' +
+      '<button class="btn" id="copy-verify">Copy verify commands</button></p>';
+    document.getElementById("copy-verify").addEventListener("click", function () {
+      var txt = "curl -sL " + rawUrl + " -o badge.json\ntrustscan verify badge.json";
+      if (navigator.clipboard) navigator.clipboard.writeText(txt);
+    });
+    detailEl.classList.add("open");
+  }
+  rowsEl.addEventListener("click", function (ev) {
+    var tr = ev.target.closest("tr[data-path]");
+    if (tr) openDetail(tr.getAttribute("data-path"));
+  });
+  document.getElementById("detail-close").addEventListener("click", function () {
+    detailEl.classList.remove("open");
+  });
+  detailEl.addEventListener("click", function (ev) {
+    if (ev.target === detailEl) detailEl.classList.remove("open");
+  });
+  qEl.addEventListener("input", render);
+  levelEl.addEventListener("change", render);
+  document.querySelectorAll("th[data-sort]").forEach(function (th) {
+    th.addEventListener("click", function () {
+      var k = th.getAttribute("data-sort");
+      if (sortKey === k) sortDir = -sortDir;
+      else { sortKey = k; sortDir = 1; }
+      render();
+    });
+  });
+
+  fetch("index.json", { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error("no manifest"); return r.json(); })
+    .then(function (m) {
+      all = m.badges || [];
+      countEl.textContent = "(" + all.length + ")";
+      render();
+    })
+    .catch(function () {
+      // Static server-rendered rows stay as the fallback.
+      var n = rowsEl.querySelectorAll("tr[data-path]").length;
+      countEl.textContent = n ? "(" + n + ")" : "";
+      showingEl.textContent = n ? "showing " + n + " of " + n : "";
+    });
+})();
+</script>
+</body>
+</html>
