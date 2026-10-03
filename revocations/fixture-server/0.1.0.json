@@ -1,0 +1,15 @@
+{
+  "type": "mcp-trust-revocation/v1",
+  "server": "fixture-server",
+  "version": "0.1.0",
+  "status": "revoked",
+  "reason": "Demo badge signed with a throwaway test key; revoked to demonstrate the revocation lifecycle.",
+  "revokedAt": "2026-10-03T16:54:22.664Z",
+  "keyId": "ac22e8d7e54463b7",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "uiN22n7I1Xe84cVLawFhOd5sc9iVWMApfuADBqyJAV0",
+    "kty": "OKP"
+  },
+  "signature": "g5osDk5TLxkvYdN657ia9j/08BPV4YhS+Ig2GT3xtqErEivRgNgQ+hcafLW/3EepW1OaCNd2IBK3FmS0hMacDg=="
+}
