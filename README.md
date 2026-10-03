@@ -27,14 +27,46 @@ A badge is a JSON document binding a scan result to an exact server version and 
 
 ## How verification works
 
-Every pull request that adds files under `badges/` runs `scripts/validate.mjs` in CI. It checks, for each added badge:
+Every pull request that adds files under `badges/`, `revocations/`, or `keys/` runs `scripts/validate.mjs` in CI.
+
+**Badges.** For each added badge it checks:
 
 1. **Placement**: the path is `badges/<server>/<version>.json` and the badge's `server`/`version` fields sanitize to exactly those path segments.
-2. **Schema**: all required fields present with the right shapes (risk score 0-100, finding counts, 64-char eval hash, embedded Ed25519 public key, ISO date).
+2. **Schema**: all required fields present with the right shapes (risk score 0-100, finding counts, 64-char eval hash, embedded Ed25519 public key, ISO date). The optional `artifact` field, when present, must be `{ type: "npm" | "git" | "local", spec: "<install spec>", integrity?: "<dist.integrity>" }`.
 3. **Signature**: the Ed25519 signature verifies against the embedded public key, and the `keyId` matches that key. The cryptography is a direct port of mcp-trust's verifier, using only the Node.js standard library.
 4. **No duplicates**: the path must not already exist on the target branch. The index is append-only per version: a new scan of a new version adds a new file; existing badges are never modified or removed via PR.
 
-A PR that modifies or deletes an existing badge file fails validation.
+**Revocations.** A badge version can be revoked by the project maintainer by adding `revocations/<server>/<version>.json`:
+
+```json
+{
+  "type": "mcp-trust-revocation/v1",
+  "server": "my-server",
+  "version": "1.2.3",
+  "status": "revoked",
+  "reason": "Signer key compromised; do not trust this badge.",
+  "revokedAt": "2026-10-04T00:00:00.000Z",
+  "keyId": "<project key id>",
+  "publicKey": { "kty": "OKP", "crv": "Ed25519", "x": "..." },
+  "signature": "<base64 Ed25519 signature>"
+}
+```
+
+CI checks placement, schema, that a badge for that server@version is actually indexed, that no revocation already exists for it, and that the signature verifies against the project key published at `keys/project.json` on the target branch. The project key is immutable: after its initial commit, PRs touching `keys/` fail validation.
+
+**Badge status.** The site and the machine-readable manifest derive a status per badge: `revoked` (a revocation exists) wins; otherwise every version except the newest indexed version of a server is `superseded`; the newest is `active`. `trustscan verify` and `trustscan pin` read this status: revoked badges are rejected, superseded ones warn.
+
+To revoke:
+
+```bash
+trustscan revoke --server my-server --version 1.2.3 \
+  --reason "Signer key compromised" \
+  --key ~/.config/mcp-trust/project/key.priv.json \
+  --out revocation.json
+# then open a PR adding revocations/my-server/1.2.3.json
+```
+
+A PR that modifies or deletes an existing badge or revocation file fails validation.
 
 ## How to publish a badge
 
@@ -51,14 +83,24 @@ You can also open a PR by hand: add `badges/<server>/<version>.json` with a vali
 
 ## How the site stays current
 
-On every push to `main` that touches `badges/`, CI regenerates `docs/index.json` (the machine-readable manifest) and the static badge table in `docs/index.html`, then serves it via GitHub Pages. The page's search, sort, filter, and detail views run entirely client-side.
+On every push to `main` that touches `badges/` or `revocations/`, CI regenerates `docs/index.json` (the machine-readable manifest, including each badge's `status` and install `artifact`) and the static badge table in `docs/index.html`, then serves it via GitHub Pages. The page's search, sort, filter, and detail views run entirely client-side.
+
+## Installing a verified version
+
+```bash
+trustscan pin my-server@1.2.3      # print the exact verified install command
+trustscan install my-server@1.2.3  # install it (npm); --dry-run to preview
+trustscan pin my-server            # latest active (non-revoked) version
+```
+
+`pin` resolves the badge from this index, refuses revoked versions, and warns on superseded ones. `install` shows the badge summary first, then runs the install.
 
 ## Honest limitations
 
 - A badge attests to the exact version scanned, at a point in time. A new release needs a new scan.
 - Static checks are heuristics with false positives; findings are review prompts, never verdicts.
-- Trust in the **signer** (the key id) is out of band, like a PGP key id. This index proves a badge is intact and well-formed, not that its signer is honest. Check who holds a key before you trust their badges.
-- The index is append-only per version in v1. There is no takedown or correction flow yet; that is a known gap.
+- Trust in the **signer** (the key id) is out of band, like a PGP key id. This index proves a badge is intact and well-formed, not that its signer is honest. Check who holds a key before you trust their badges. Badges signed with the project key (`ac22e8d7e54463b7`) were produced by the mcp-trust project itself.
+- Revocation covers bad badges, not bad servers: revoking a badge does not uninstall the server. Always verify before you install.
 - Verify any badge yourself: `trustscan verify badge.json`.
 
 ## License
