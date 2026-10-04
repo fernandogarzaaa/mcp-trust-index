@@ -1,0 +1,32 @@
+{
+  "type": "sigil-badge/v1",
+  "server": "chrome_devtools",
+  "version": "1.10.1",
+  "riskScore": 96,
+  "riskLevel": "low",
+  "scores": {
+    "mcp.schemaQuality": 96,
+    "mcp.robustness": 100,
+    "mcp.conformance": 100
+  },
+  "findingCounts": {
+    "critical": 0,
+    "major": 0,
+    "minor": 1,
+    "info": 0
+  },
+  "evalHash": "1dffa98c25b7a84d5ebe7fbbec3b135d5ccad37e309fe5594044f5fd585107fa",
+  "keyId": "ac22e8d7e54463b7",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "uiN22n7I1Xe84cVLawFhOd5sc9iVWMApfuADBqyJAV0",
+    "kty": "OKP"
+  },
+  "issuedAt": "2026-10-04T06:02:08.953Z",
+  "artifact": {
+    "type": "npm",
+    "spec": "chrome-devtools-mcp@1.10.1",
+    "integrity": "sha512-Klw6HWDqHC/XS1JwZldd2r49aUhbUJN9m9Mvcx4SEueIPXtzuQX+QelxAViobv8YUkDZ7HWDrmViR6LeYK0wAw=="
+  },
+  "signature": "M8KnYfUILxvJdwbzoY6t6Y6ZejvJI4hymsEMHdsUJxBjH7aLr52+BQZGrqwvX3F+qEuguBGwPEP6KNWs4ha8Ag=="
+}
