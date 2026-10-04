@@ -1,11 +1,11 @@
 name: Validate badges
 
+# Runs on every PR (no paths filter): a required status check must be
+# produced for every PR or auto-merge deadlocks. With no added badge
+# files the validator trivially passes.
+
 on:
   pull_request:
-    paths:
-      - "badges/**"
-      - "revocations/**"
-      - "keys/**"
 
 permissions:
   contents: read

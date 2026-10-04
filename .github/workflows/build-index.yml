@@ -1,17 +1,17 @@
-name: Rebuild index
+name: Check index freshness
+
+# The derived site files must be rebuilt by the PR author: the old
+# push-to-main rebuild bot cannot run under branch protection.
+# Runs on every PR; the build is deterministic, so a diff means stale files.
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "badges/**"
-      - "revocations/**"
+  pull_request:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  build:
+  freshness:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,10 +20,11 @@ jobs:
           node-version: 20
       - name: Rebuild manifest and site table
         run: node scripts/build-site.mjs
-      - name: Commit rebuilt index
+      - name: Fail if derived files are stale
         run: |
-          git config user.name "sigil-index bot"
-          git config user.email "bot@users.noreply.github.com"
-          git add docs/index.json docs/index.html
-          git diff --cached --quiet || git commit -m "Rebuild trust index [skip ci]"
-          git push
+          if ! git diff --quiet -- docs/index.json docs/index.html; then
+            echo "::error::docs/index.json / docs/index.html are stale. Run 'node scripts/build-site.mjs' and commit the result."
+            git diff --stat -- docs/index.json docs/index.html
+            exit 1
+          fi
+          echo "derived index files are fresh"
