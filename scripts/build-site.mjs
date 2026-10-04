@@ -207,7 +207,7 @@ function main() {
 	const entries = collectBadges();
 	writeFileSync(
 		INDEX_JSON,
-		`${JSON.stringify({ generatedAt: new Date().toISOString(), count: entries.length, badges: entries }, null, 2)}\n`,
+		`${JSON.stringify({ count: entries.length, badges: entries }, null, 2)}\n`,
 	);
 
 	let html = readFileSync(INDEX_HTML, "utf8");
