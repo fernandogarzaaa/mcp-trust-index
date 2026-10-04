@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>mcp-trust index: signed trust badges for MCP servers</title>
-<meta name="description" content="A public, git-backed index of signed trust badges for MCP servers, emitted by trustscan (mcp-trust).">
+<title>Sigil index: signed trust badges for MCP servers</title>
+<meta name="description" content="A public, git-backed index of signed trust badges for MCP servers, emitted by Sigil.">
 <style>
 :root { color-scheme: light dark; }
 * { box-sizing: border-box; }
@@ -58,20 +58,20 @@ footer { margin-top: 3rem; color: #888; font-size: 0.85rem; border-top: 1px soli
 </head>
 <body>
 <header>
-  <h1>mcp-trust index</h1>
+  <h1>Sigil index</h1>
   <p class="sub">A public, git-backed index of signed trust badges for MCP servers. Every badge is cryptographically verified by CI before it lands here. A badge attests to the exact version scanned, nothing more.</p>
   <p>
-    <a class="btn" href="https://github.com/fernandogarzaaa/mcp-trust-index">Index repo</a>
-    <a class="btn" href="https://github.com/fernandogarzaaa/mcp-trust">trustscan (mcp-trust)</a>
+    <a class="btn" href="https://github.com/fernandogarzaaa/sigil-index">Index repo</a>
+    <a class="btn" href="https://github.com/fernandogarzaaa/sigil">Sigil</a>
   </p>
 </header>
 
 <main>
   <h2>Publish a badge</h2>
-  <pre>trustscan scan ./my-server --sign --badge-out my-server.trust.json
-trustscan publish --badge my-server.trust.json
+  <pre>sigil scan ./my-server --sign --badge-out my-server.trust.json
+sigil publish --badge my-server.trust.json
 # or one step:
-trustscan scan ./my-server --sign --publish</pre>
+sigil scan ./my-server --sign --publish</pre>
   <p>Publishing opens a pull request against this index. CI verifies the badge's Ed25519 signature and schema before a maintainer merges it.</p>
 
   <h2>Indexed badges <span id="count"></span></h2>
@@ -381,7 +381,7 @@ trustscan scan ./my-server --sign --publish</pre>
 </div>
 
 <footer>
-  <p>Honest limitations: a badge attests to the exact version scanned at a point in time; a new release needs a new scan. Static checks are heuristics with false positives. Trust in the <em>signer</em> (the key id) is out of band, like a PGP key id: the index proves a badge is intact and well-formed, not that its signer is honest. Verify any badge yourself with <code>trustscan verify badge.json</code>.</p>
+  <p>Honest limitations: a badge attests to the exact version scanned at a point in time; a new release needs a new scan. Static checks are heuristics with false positives. Trust in the <em>signer</em> (the key id) is out of band, like a PGP key id: the index proves a badge is intact and well-formed, not that its signer is honest. Verify any badge yourself with <code>sigil verify badge.json</code>.</p>
 </footer>
 
 <script>
@@ -453,7 +453,7 @@ trustscan scan ./my-server --sign --publish</pre>
   function openDetail(path) {
     var e = all.find(function (x) { return x.path === path; });
     if (!e) return;
-    var rawUrl = "https://raw.githubusercontent.com/fernandogarzaaa/mcp-trust-index/main/" + e.path;
+    var rawUrl = "https://raw.githubusercontent.com/fernandogarzaaa/sigil-index/main/" + e.path;
     var fc = e.findingCounts;
     detailBody.innerHTML =
       "<h2>" + esc(e.server) + " <code>" + esc(e.version) + "</code></h2>" +
@@ -474,11 +474,11 @@ trustscan scan ./my-server --sign --publish</pre>
       "<dt>Issued</dt><dd>" + esc(e.issuedAt) + "</dd>" +
       "</dl>" +
       "<h3>Verify it yourself</h3>" +
-      "<pre>curl -sL " + esc(rawUrl) + " -o badge.json\ntrustscan verify badge.json</pre>" +
+      "<pre>curl -sL " + esc(rawUrl) + " -o badge.json\nsigil verify badge.json</pre>" +
       '<p><a class="btn" href="' + esc(rawUrl) + '" download>Download badge JSON</a>' +
       '<button class="btn" id="copy-verify">Copy verify commands</button></p>';
     document.getElementById("copy-verify").addEventListener("click", function () {
-      var txt = "curl -sL " + rawUrl + " -o badge.json\ntrustscan verify badge.json";
+      var txt = "curl -sL " + rawUrl + " -o badge.json\nsigil verify badge.json";
       if (navigator.clipboard) navigator.clipboard.writeText(txt);
     });
     detailEl.classList.add("open");
