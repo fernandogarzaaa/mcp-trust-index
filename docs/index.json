@@ -1,7 +1,29 @@
 {
-  "generatedAt": "2026-10-03T17:27:04.660Z",
-  "count": 22,
+  "generatedAt": "2026-10-04T06:16:34.488Z",
+  "count": 26,
   "badges": [
+    {
+      "server": "@apify/actors-mcp-server",
+      "version": "0.17.1",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-04T05:59:37.632Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@apify/actors-mcp-server@0.17.1",
+        "integrity": "sha512-Qp65bvlMEo6rThH9xfTB5WwshN60KUOW1xL/dfuQHLrMqTNeLinQfUxODp3lIrX+7Kz1dBaz/+ySNk2g5cSG1w=="
+      },
+      "path": "badges/apify-actors-mcp-server/0.17.1.json",
+      "status": "active"
+    },
     {
       "server": "@modelcontextprotocol/server-aws-kb-retrieval",
       "version": "0.6.2",
@@ -347,6 +369,28 @@
       "status": "active"
     },
     {
+      "server": "@sentry/mcp-server",
+      "version": "0.42.0",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-04T06:00:38.091Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@sentry/mcp-server@0.42.0",
+        "integrity": "sha512-KmwfBOUMzJdcxeM9Iv6EN4XEjXbGyopTeKizgQr46pW35NTFTRBddVepZytVITS4pnx5pXj6bRHadSowaaRHQQ=="
+      },
+      "path": "badges/sentry-mcp-server/0.42.0.json",
+      "status": "active"
+    },
+    {
       "server": "@stripe/mcp",
       "version": "0.3.3",
       "riskScore": 100,
@@ -392,6 +436,32 @@
         "integrity": "sha512-fUARTIZGVKzlzQKDhKUg4aIQ3yEU/12STdfxJDDnLMSN7yyHiPvNHI05iFwxkv3vC8G76Wp27MwK6Jucl/C5pA=="
       },
       "path": "badges/upstash-context7-mcp/4.1.1.json",
+      "status": "active"
+    },
+    {
+      "server": "chrome_devtools",
+      "version": "1.10.1",
+      "riskScore": 96,
+      "riskLevel": "low",
+      "scores": {
+        "mcp.schemaQuality": 96,
+        "mcp.robustness": 100,
+        "mcp.conformance": 100
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 1,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-04T06:02:08.953Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "chrome-devtools-mcp@1.10.1",
+        "integrity": "sha512-Klw6HWDqHC/XS1JwZldd2r49aUhbUJN9m9Mvcx4SEueIPXtzuQX+QelxAViobv8YUkDZ7HWDrmViR6LeYK0wAw=="
+      },
+      "path": "badges/chrome_devtools/1.10.1.json",
       "status": "active"
     },
     {
@@ -537,6 +607,32 @@
         "integrity": "sha512-9TPqmLKUZwdodozHzWsgZQrRtXbkQUTT424CJxCfZOeGhuIuq7CRij9A+vQbIdAnl6gG1ejqRLqpdqfR4cimtw=="
       },
       "path": "badges/mcp-server-kubernetes/4.1.9.json",
+      "status": "active"
+    },
+    {
+      "server": "UI5",
+      "version": "0.3.1",
+      "riskScore": 86,
+      "riskLevel": "medium",
+      "scores": {
+        "mcp.schemaQuality": 100,
+        "mcp.robustness": 100,
+        "mcp.conformance": 96
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 2,
+        "info": 6
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-04T05:59:28.111Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@ui5/mcp-server@0.3.1",
+        "integrity": "sha512-zdwKVNh4bZ5RLcDlmsNkFJNQBNOoxLcEZNO8aIyeYvg6T5mLvz/BmQccvUoGY7S369jYvbNqHvE4+Hwb6R6pPA=="
+      },
+      "path": "badges/ui5/0.3.1.json",
       "status": "active"
     }
   ]
