@@ -178,7 +178,7 @@ function statusCell(e) {
 
 function renderRows(entries) {
 	if (entries.length === 0) {
-		return '    <tr><td colspan="10" class="empty">No badges indexed yet. Publish the first one with <code>trustscan publish</code>.</td></tr>';
+		return '    <tr><td colspan="10" class="empty">No badges indexed yet. Publish the first one with <code>sigil publish</code>.</td></tr>';
 	}
 	return entries
 		.map((e) => {

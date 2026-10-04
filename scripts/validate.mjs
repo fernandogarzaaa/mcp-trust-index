@@ -11,10 +11,10 @@
  * For each badge file under badges/ it checks:
  *   1. the path matches badges/<sanitized-server>/<sanitized-version>.json
  *      and the badge's server/version fields sanitize to those segments;
- *   2. the badge JSON matches the mcp-trust badge schema (v1), including the
+ *   2. the badge JSON matches the Sigil badge schema (v1), including the
  *      optional artifact field when present;
  *   3. the Ed25519 signature verifies against the embedded public key and
- *      the keyId matches that key (ported from mcp-trust's src/sign.ts;
+ *      the keyId matches that key (ported from Sigil's src/sign.ts;
  *      node stdlib only, no dependencies);
  *   4. the path does not already exist on the base ref (the index is
  *      append-only per version in v1).
@@ -22,7 +22,7 @@
  * For each revocation file under revocations/ it checks:
  *   1. the path matches revocations/<sanitized-server>/<sanitized-version>.json
  *      and the revocation's server/version fields sanitize to those segments;
- *   2. the revocation JSON matches the mcp-trust revocation schema (v1);
+ *   2. the revocation JSON matches the Sigil revocation schema (v1);
  *   3. the Ed25519 signature verifies against the project maintainer key
  *      published at keys/project.json on the base ref;
  *   4. a badge for that server@version exists on the base ref (you can only
@@ -47,8 +47,11 @@ import {
 } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 
-const BADGE_TYPE = "mcp-trust-badge/v1";
-const REVOCATION_TYPE = "mcp-trust-revocation/v1";
+const BADGE_TYPE = "sigil-badge/v1";
+const REVOCATION_TYPE = "sigil-revocation/v1";
+/** Pre-rename type tags. Still accepted so badges issued before the Sigil rename keep validating. */
+const LEGACY_BADGE_TYPE = "mcp-trust-badge/v1";
+const LEGACY_REVOCATION_TYPE = "mcp-trust-revocation/v1";
 const RISK_LEVELS = ["low", "medium", "high", "critical"];
 const HEX64 = /^[0-9a-f]{64}$/;
 const HEX16 = /^[0-9a-f]{16}$/;
@@ -56,7 +59,7 @@ const SAFE_SEGMENT = /^[A-Za-z0-9._-]+$/;
 const ARTIFACT_TYPES = ["npm", "git", "local"];
 const MAINTAINER_KEY_PATH = "keys/project.json";
 
-/** Canonical JSON: object keys sorted recursively, no whitespace. Ported from mcp-trust src/sign.ts. */
+/** Canonical JSON: object keys sorted recursively, no whitespace. Ported from Sigil src/sign.ts. */
 function canonicalize(value) {
 	if (Array.isArray(value)) {
 		return `[${value.map((v) => canonicalize(v)).join(",")}]`;
@@ -75,7 +78,7 @@ function sha256Hex(data) {
 }
 
 /**
- * Path segment rule. Must be identical to the rule in trustscan's publish
+ * Path segment rule. Must be identical to the rule in sigil's publish
  * command: lowercase, anything outside [a-z0-9._-] becomes "-", runs
  * collapsed, never empty, never "." or "..".
  */
@@ -88,10 +91,13 @@ export function sanitizeSegment(raw) {
 	return out;
 }
 
-/** Full cryptographic verification. Ported from mcp-trust src/sign.ts verifyBadge. */
+/** Full cryptographic verification. Ported from Sigil src/sign.ts verifyBadge. */
 function verifySignature(badge) {
-	if (!badge || badge.type !== BADGE_TYPE) {
-		return { ok: false, reason: "not a mcp-trust badge (bad type field)" };
+	if (
+		!badge ||
+		(badge.type !== BADGE_TYPE && badge.type !== LEGACY_BADGE_TYPE)
+	) {
+		return { ok: false, reason: "not a Sigil badge (bad type field)" };
 	}
 	if (
 		!badge.publicKey ||
@@ -147,8 +153,8 @@ function schemaProblems(badge) {
 	const isObj = (v) => v !== null && typeof v === "object" && !Array.isArray(v);
 
 	if (!isObj(badge)) return ["badge root is not a JSON object"];
-	if (badge.type !== BADGE_TYPE)
-		problems.push(`type must be "${BADGE_TYPE}"`);
+	if (badge.type !== BADGE_TYPE && badge.type !== LEGACY_BADGE_TYPE)
+		problems.push(`type must be "${BADGE_TYPE}" or "${LEGACY_BADGE_TYPE}"`);
 	if (typeof badge.server !== "string" || badge.server.length === 0)
 		problems.push("server must be a non-empty string");
 	if (typeof badge.version !== "string" || badge.version.length === 0)
@@ -231,8 +237,10 @@ function schemaProblemsRevocation(rev) {
 	const isObj = (v) => v !== null && typeof v === "object" && !Array.isArray(v);
 
 	if (!isObj(rev)) return ["revocation root is not a JSON object"];
-	if (rev.type !== REVOCATION_TYPE)
-		problems.push(`type must be "${REVOCATION_TYPE}"`);
+	if (rev.type !== REVOCATION_TYPE && rev.type !== LEGACY_REVOCATION_TYPE)
+		problems.push(
+			`type must be "${REVOCATION_TYPE}" or "${LEGACY_REVOCATION_TYPE}"`,
+		);
 	if (typeof rev.server !== "string" || rev.server.length === 0)
 		problems.push("server must be a non-empty string");
 	if (typeof rev.version !== "string" || rev.version.length === 0)
