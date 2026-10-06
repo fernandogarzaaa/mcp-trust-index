@@ -1,6 +1,28 @@
 {
-  "count": 31,
+  "count": 38,
   "badges": [
+    {
+      "server": "@apify/actors-mcp-server",
+      "version": "0.17.3",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-06T21:22:05.562Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@apify/actors-mcp-server@0.17.3",
+        "integrity": "sha512-kxdO2MDxgMMepNnLHSx3HyOJftuRsfMsmeY9nVQPtw8wEHRHkNiMZbF8VEtJRqunVup8Kl/stiP/9E8wJE0b4Q=="
+      },
+      "path": "badges/apify-actors-mcp-server/0.17.3.json",
+      "status": "active"
+    },
     {
       "server": "@apify/actors-mcp-server",
       "version": "0.17.2",
@@ -21,7 +43,7 @@
         "integrity": "sha512-0Gkt3/LMPJmZQ2j3GKvHVxsFSRo5X2HGixPcofdbcNxaBAvbHCjdl/dpUPugIpfx/BquOYC8RYjW6oDV+pDuCw=="
       },
       "path": "badges/apify-actors-mcp-server/0.17.2.json",
-      "status": "active"
+      "status": "superseded"
     },
     {
       "server": "@apify/actors-mcp-server",
@@ -44,6 +66,28 @@
       },
       "path": "badges/apify-actors-mcp-server/0.17.1.json",
       "status": "superseded"
+    },
+    {
+      "server": "@hubspot/mcp-server",
+      "version": "0.4.0",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-06T21:29:22.479Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@hubspot/mcp-server@0.4.0",
+        "integrity": "sha512-nNNrqysJrCkPb8XWl3wd2d61nTLf8IAnfWOHag4FCSRKRjSXuIE/2h4GVUcPmVhJVaN7RsIq8C43BMFV+EI9GA=="
+      },
+      "path": "badges/hubspot-mcp-server/0.4.0.json",
+      "status": "active"
     },
     {
       "server": "@modelcontextprotocol/server-aws-kb-retrieval",
@@ -500,6 +544,28 @@
       "status": "active"
     },
     {
+      "server": "@transcend-io/mcp-server-inventory",
+      "version": "1.0.16",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-06T21:31:48.272Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@transcend-io/mcp-server-inventory@1.0.16",
+        "integrity": "sha512-NjH4SdAGh9nFQJY4HsaLZVWsM+HjRgBMZOQP7cglUhh/3GDIgmApAUbEIfssjlXlX3S1U19otIRTmlJo9wjkDw=="
+      },
+      "path": "badges/transcend-io-mcp-server-inventory/1.0.16.json",
+      "status": "active"
+    },
+    {
       "server": "@transcend-io/mcp-server-preferences",
       "version": "0.7.20",
       "riskScore": 100,
@@ -596,6 +662,32 @@
       "status": "active"
     },
     {
+      "server": "firecrawl-fastmcp",
+      "version": "3.28.1",
+      "riskScore": 79,
+      "riskLevel": "medium",
+      "scores": {
+        "mcp.schemaQuality": 79,
+        "mcp.robustness": 100,
+        "mcp.conformance": 100
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 21
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-06T21:28:22.995Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "firecrawl-mcp@3.28.1",
+        "integrity": "sha512-R8E8X9FO3C/9tF1cwHiBzVyhpcaRmAuGLnPA4fkIZk4To95jtOVjkHtTfnpSE/CVBgxTeawBTvTvvdZ9C7B8ZQ=="
+      },
+      "path": "badges/firecrawl-fastmcp/3.28.1.json",
+      "status": "active"
+    },
+    {
       "server": "firecrawl-mcp",
       "version": "3.27.3",
       "riskScore": 79,
@@ -643,6 +735,32 @@
       "path": "badges/fixture-server/0.1.0.json",
       "status": "revoked",
       "revocationReason": "Demo badge signed with a throwaway test key; revoked to demonstrate the revocation lifecycle."
+    },
+    {
+      "server": "hostinger-api-mcp",
+      "version": "2.8.0",
+      "riskScore": 61,
+      "riskLevel": "high",
+      "scores": {
+        "mcp.schemaQuality": 99,
+        "mcp.robustness": 100,
+        "mcp.conformance": 100
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 8,
+        "info": 7
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-06T21:30:01.498Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "hostinger-api-mcp@2.8.0",
+        "integrity": "sha512-4vDouKHxEbJW2UgSo+rY594hlrQ6XTo5cUuyfchsyUf/3YHzAaG9EfKxt4W88WMfxWhQw0CWGccqvm0D5y8mag=="
+      },
+      "path": "badges/hostinger-api-mcp/2.8.0.json",
+      "status": "active"
     },
     {
       "server": "kubernetes-mcp-server",
@@ -719,6 +837,58 @@
       "status": "active"
     },
     {
+      "server": "transcend-mcp-docs",
+      "version": "0.4.15",
+      "riskScore": 96,
+      "riskLevel": "low",
+      "scores": {
+        "mcp.schemaQuality": 100,
+        "mcp.robustness": 100,
+        "mcp.conformance": 96
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 1,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-06T21:31:23.598Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@transcend-io/mcp-server-docs@0.4.15",
+        "integrity": "sha512-f9UeO2SvHyO4Ko+LgKzbslkMzJyYhhM46ctBt74MVYQH273pAevGxAQqTWAeZZdr0rncE0uW/lne7DALcTDHoA=="
+      },
+      "path": "badges/transcend-mcp-docs/0.4.15.json",
+      "status": "active"
+    },
+    {
+      "server": "UI5",
+      "version": "0.3.2",
+      "riskScore": 86,
+      "riskLevel": "medium",
+      "scores": {
+        "mcp.schemaQuality": 100,
+        "mcp.robustness": 100,
+        "mcp.conformance": 96
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 2,
+        "info": 6
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-06T21:27:16.137Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@ui5/mcp-server@0.3.2",
+        "integrity": "sha512-kQXn5X2vpzAjWpHr4R61EqEvWU0GtoTmL5aAjK0IzBKIVdFNXluoz6bKMJAHCqMXS+6vwdhYtVxNOYX/Vb7Zog=="
+      },
+      "path": "badges/ui5/0.3.2.json",
+      "status": "active"
+    },
+    {
       "server": "UI5",
       "version": "0.3.1",
       "riskScore": 86,
@@ -742,7 +912,7 @@
         "integrity": "sha512-zdwKVNh4bZ5RLcDlmsNkFJNQBNOoxLcEZNO8aIyeYvg6T5mLvz/BmQccvUoGY7S369jYvbNqHvE4+Hwb6R6pPA=="
       },
       "path": "badges/ui5/0.3.1.json",
-      "status": "active"
+      "status": "superseded"
     }
   ]
 }
