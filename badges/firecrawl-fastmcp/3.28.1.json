@@ -1,0 +1,32 @@
+{
+  "type": "sigil-badge/v1",
+  "server": "firecrawl-fastmcp",
+  "version": "3.28.1",
+  "riskScore": 79,
+  "riskLevel": "medium",
+  "scores": {
+    "mcp.schemaQuality": 79,
+    "mcp.robustness": 100,
+    "mcp.conformance": 100
+  },
+  "findingCounts": {
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "info": 21
+  },
+  "evalHash": "d04ed0f5c772b7a9c8cd0e093cc67a8dc82e182a03e873190d91f3ddcb725fae",
+  "keyId": "ac22e8d7e54463b7",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "uiN22n7I1Xe84cVLawFhOd5sc9iVWMApfuADBqyJAV0",
+    "kty": "OKP"
+  },
+  "issuedAt": "2026-10-06T21:28:22.995Z",
+  "artifact": {
+    "type": "npm",
+    "spec": "firecrawl-mcp@3.28.1",
+    "integrity": "sha512-R8E8X9FO3C/9tF1cwHiBzVyhpcaRmAuGLnPA4fkIZk4To95jtOVjkHtTfnpSE/CVBgxTeawBTvTvvdZ9C7B8ZQ=="
+  },
+  "signature": "eoYNgVoHR0BOtIk1UdUhkuNZUmrt2ZKvWKqdKNnRqqQNSFCFnIQ42R+MmggDjANep2CtOTOi6zl0LP6NIStIBg=="
+}
