@@ -1,6 +1,28 @@
 {
-  "count": 38,
+  "count": 45,
   "badges": [
+    {
+      "server": "@apify/actors-mcp-server",
+      "version": "0.17.4",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-07T21:22:14.937Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@apify/actors-mcp-server@0.17.4",
+        "integrity": "sha512-EOzzBSTA3/o/QM1EptJO+ZyoooZ/dlbb8uvI7qjf7MWzcQE+U6kQcFybjQaeCeOBYy+5epxV1jvuPW1CottTsA=="
+      },
+      "path": "badges/apify-actors-mcp-server/0.17.4.json",
+      "status": "active"
+    },
     {
       "server": "@apify/actors-mcp-server",
       "version": "0.17.3",
@@ -21,7 +43,7 @@
         "integrity": "sha512-kxdO2MDxgMMepNnLHSx3HyOJftuRsfMsmeY9nVQPtw8wEHRHkNiMZbF8VEtJRqunVup8Kl/stiP/9E8wJE0b4Q=="
       },
       "path": "badges/apify-actors-mcp-server/0.17.3.json",
-      "status": "active"
+      "status": "superseded"
     },
     {
       "server": "@apify/actors-mcp-server",
@@ -87,6 +109,28 @@
         "integrity": "sha512-nNNrqysJrCkPb8XWl3wd2d61nTLf8IAnfWOHag4FCSRKRjSXuIE/2h4GVUcPmVhJVaN7RsIq8C43BMFV+EI9GA=="
       },
       "path": "badges/hubspot-mcp-server/0.4.0.json",
+      "status": "active"
+    },
+    {
+      "server": "@iobroker/mcp-server",
+      "version": "1.1.3",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-07T21:43:20.748Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@iobroker/mcp-server@1.1.3",
+        "integrity": "sha512-SO2OGIUIfq3BNXSbMWbdyKwSp+5u9uP9yt4KDyjwer4pz+KIee1wXhkSZF1VmiJlJ0t+Maukn+Q3ajjsfAtDfA=="
+      },
+      "path": "badges/iobroker-mcp-server/1.1.3.json",
       "status": "active"
     },
     {
@@ -544,6 +588,28 @@
       "status": "active"
     },
     {
+      "server": "@transcend-io/mcp-server-dsr",
+      "version": "2.0.13",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-07T21:30:57.355Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@transcend-io/mcp-server-dsr@2.0.13",
+        "integrity": "sha512-VBrIIgVhYdHwfGhnb5pYY1emB+ti6czy+ZpjWebByUpG8nwlZ+V5+gGT/n6jOvg+RSLw2Q6haPGYaTESyHGHpQ=="
+      },
+      "path": "badges/transcend-io-mcp-server-dsr/2.0.13.json",
+      "status": "active"
+    },
+    {
       "server": "@transcend-io/mcp-server-inventory",
       "version": "1.0.16",
       "riskScore": 100,
@@ -614,6 +680,28 @@
       "status": "active"
     },
     {
+      "server": "@winor30/mcp-server-datadog",
+      "version": "1.8.0",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-07T21:42:21.798Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@winor30/mcp-server-datadog@1.8.0",
+        "integrity": "sha512-h6HySYW/q2YdzNdrUc7aOaRoaer4oYrDuy0QRQEZkzgfGey+Dmot2IeYI25jYaR4bu0fKoZbIx6UVmfIMF5Pcw=="
+      },
+      "path": "badges/winor30-mcp-server-datadog/1.8.0.json",
+      "status": "active"
+    },
+    {
       "server": "chrome_devtools",
       "version": "1.10.1",
       "riskScore": 96,
@@ -640,6 +728,32 @@
       "status": "active"
     },
     {
+      "server": "Context7",
+      "version": "4.2.0",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": {
+        "mcp.schemaQuality": 100,
+        "mcp.robustness": 100,
+        "mcp.conformance": 100
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-07T21:23:35.139Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@upstash/context7-mcp@4.2.0",
+        "integrity": "sha512-RWnW8YCCIdpd0fObyPxoJqULNTm06YCIMskbxbY5cb3PamC//d2z0bPXHG6AVhMCgFQeh3SxtE4TyPoN4r7U/Q=="
+      },
+      "path": "badges/context7/4.2.0.json",
+      "status": "active"
+    },
+    {
       "server": "exa-mcp",
       "version": "0.0.7",
       "riskScore": 100,
@@ -659,6 +773,32 @@
         "integrity": "sha512-3GUZAfhg+uL5aAHwNO2TC6q9PNz7FDoDMbxXkoVga26paBGqZveja4SEEbfhNarBww4QLXFwzlDfbx8EwNX85g=="
       },
       "path": "badges/exa-mcp/0.0.7.json",
+      "status": "active"
+    },
+    {
+      "server": "firecrawl-fastmcp",
+      "version": "3.28.2",
+      "riskScore": 79,
+      "riskLevel": "medium",
+      "scores": {
+        "mcp.schemaQuality": 79,
+        "mcp.robustness": 100,
+        "mcp.conformance": 100
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 21
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-07T21:29:49.905Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "firecrawl-mcp@3.28.2",
+        "integrity": "sha512-uF44mMgxoI+6RacXIDnQeHg345VYOcfWQ9bIFJ04jP0g5uSK8FP6NaNX9aeF8ugJXRh2SghOxgNgIzlB7rI4gg=="
+      },
+      "path": "badges/firecrawl-fastmcp/3.28.2.json",
       "status": "active"
     },
     {
@@ -685,7 +825,7 @@
         "integrity": "sha512-R8E8X9FO3C/9tF1cwHiBzVyhpcaRmAuGLnPA4fkIZk4To95jtOVjkHtTfnpSE/CVBgxTeawBTvTvvdZ9C7B8ZQ=="
       },
       "path": "badges/firecrawl-fastmcp/3.28.1.json",
-      "status": "active"
+      "status": "superseded"
     },
     {
       "server": "firecrawl-mcp",
@@ -735,6 +875,32 @@
       "path": "badges/fixture-server/0.1.0.json",
       "status": "revoked",
       "revocationReason": "Demo badge signed with a throwaway test key; revoked to demonstrate the revocation lifecycle."
+    },
+    {
+      "server": "Heroku MCP Server",
+      "version": "1.2.11",
+      "riskScore": 0,
+      "riskLevel": "high",
+      "scores": {
+        "mcp.schemaQuality": 67,
+        "mcp.robustness": 0,
+        "mcp.conformance": 96
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 65,
+        "minor": 1,
+        "info": 33
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-07T21:39:03.074Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@heroku/mcp-server@1.2.11",
+        "integrity": "sha512-2eM+wkowSHeg9YPPFwhvQ7/bK0UqSob4ItRgGlBEWwGIVa5Hq6ut3lTrM7rUJHBa4vkM7GAPhQVuN0M5fjqabQ=="
+      },
+      "path": "badges/heroku-mcp-server/1.2.11.json",
+      "status": "active"
     },
     {
       "server": "hostinger-api-mcp",
