@@ -1,5 +1,5 @@
 {
-  "count": 45,
+  "count": 49,
   "badges": [
     {
       "server": "@apify/actors-mcp-server",
@@ -544,6 +544,28 @@
       "status": "active"
     },
     {
+      "server": "@transcend-io/mcp-server-base",
+      "version": "2.5.4",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-08T21:31:34.656Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@transcend-io/mcp-server-base@2.5.4",
+        "integrity": "sha512-M2tNZPnkk+1qAMXwZ+9VQ38wtarxZYp3KHsK+pQMV2y8AXTRfGqfmIiQPcIUjdUFjUSYhQx/MeD7HGx0bPPsAA=="
+      },
+      "path": "badges/transcend-io-mcp-server-base/2.5.4.json",
+      "status": "active"
+    },
+    {
       "server": "@transcend-io/mcp-server-consent",
       "version": "1.3.1",
       "riskScore": 100,
@@ -699,6 +721,28 @@
         "integrity": "sha512-h6HySYW/q2YdzNdrUc7aOaRoaer4oYrDuy0QRQEZkzgfGey+Dmot2IeYI25jYaR4bu0fKoZbIx6UVmfIMF5Pcw=="
       },
       "path": "badges/winor30-mcp-server-datadog/1.8.0.json",
+      "status": "active"
+    },
+    {
+      "server": "@zencoderai/slack-mcp-server",
+      "version": "0.0.1",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-08T21:36:48.056Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@zencoderai/slack-mcp-server@0.0.1",
+        "integrity": "sha512-D+gC+uD1k3mLHkPESvHX9y22IwFhk1pi9m5JT/qy4Bt7QWAXf8iDSKcBF6q5B++IETnRrUzq4RVIgBC2e5k37Q=="
+      },
+      "path": "badges/zencoderai-slack-mcp-server/0.0.1.json",
       "status": "active"
     },
     {
@@ -1000,6 +1044,54 @@
         "integrity": "sha512-9TPqmLKUZwdodozHzWsgZQrRtXbkQUTT424CJxCfZOeGhuIuq7CRij9A+vQbIdAnl6gG1ejqRLqpdqfR4cimtw=="
       },
       "path": "badges/mcp-server-kubernetes/4.1.9.json",
+      "status": "active"
+    },
+    {
+      "server": "mcp-server/scryfall",
+      "version": "0.1.1",
+      "riskScore": 89,
+      "riskLevel": "medium",
+      "scores": {
+        "mcp.schemaQuality": 93,
+        "mcp.robustness": 100,
+        "mcp.conformance": 96
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 1,
+        "info": 7
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-08T21:30:37.036Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "scryfall-mcp-server@0.1.1",
+        "integrity": "sha512-nnDI1UIv53pM8SL/j7MGn1Om04hODMEmzUISk5OUDvBcOsuZvlBBWzSJNoplJO0/0BeU0LrbszhGbAlDY1s5Sw=="
+      },
+      "path": "badges/mcp-server-scryfall/0.1.1.json",
+      "status": "active"
+    },
+    {
+      "server": "tiny-http-mcp-server",
+      "version": "0.1.131",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-08T21:34:23.919Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "tiny-http-mcp-server@0.1.131",
+        "integrity": "sha512-hNGRyPXWB+xAhRhztmMnaBLqYR8Q4rz+8VAFAyeWuQIuUzvAZLgn3zXKe4c92EpNG01MoO5X8ZWZRDz5vdHwFA=="
+      },
+      "path": "badges/tiny-http-mcp-server/0.1.131.json",
       "status": "active"
     },
     {
