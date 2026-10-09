@@ -191,9 +191,9 @@ function renderRows(entries) {
 				`      <td><code>${esc(e.version)}</code></td>\n` +
 				`      <td><span class="${levelClass(e.riskLevel)}">${e.riskScore}/100 ${esc(e.riskLevel)}</span></td>\n` +
 				`      ${statusCell(e)}\n` +
-				`      ${scoreCell(e.scores, "schemaQuality")}\n` +
-				`      ${scoreCell(e.scores, "conformance")}\n` +
-				`      ${scoreCell(e.scores, "robustness")}\n` +
+				`      ${scoreCell(e.scores, "mcp.schemaQuality")}\n` +
+				`      ${scoreCell(e.scores, "mcp.conformance")}\n` +
+				`      ${scoreCell(e.scores, "mcp.robustness")}\n` +
 				`      <td title="critical / major / minor / info">${esc(findings)}</td>\n` +
 				`      <td><code title="${esc(e.keyId)}">${esc(e.keyId.slice(0, 8))}</code></td>\n` +
 				`      <td>${esc(issued)}</td>\n` +
