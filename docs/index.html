@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sigil index: signed trust badges for MCP servers</title>
 <meta name="description" content="A public, git-backed index of signed trust badges for MCP servers, emitted by Sigil.">
+<link rel="canonical" href="https://fernandogarzaaa.github.io/sigil-index/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fernandogarzaaa.github.io/sigil-index/">
+<meta property="og:title" content="Sigil index: signed trust badges for MCP servers">
+<meta property="og:description" content="A public, git-backed index of signed trust badges for MCP servers, emitted by Sigil. Every badge is cryptographically verified by CI.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231a1a2e'/%3E%3Cpath d='M32 12l14 6v12c0 9-6 16-14 20-8-4-14-11-14-20V18z' fill='none' stroke='%237dd3a8' stroke-width='4'/%3E%3Cpath d='M26 32l5 5 8-9' fill='none' stroke='%237dd3a8' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <style>
 :root { color-scheme: light dark; }
 * { box-sizing: border-box; }
@@ -18,6 +25,7 @@ pre { background: #8881; padding: 0.75rem 1rem; border-radius: 8px; overflow-x: 
 .controls input[type="search"] { padding: 0.5rem 0.75rem; border: 1px solid #8886; border-radius: 8px; min-width: 220px; font-size: 1rem; }
 .controls select { padding: 0.5rem; border: 1px solid #8886; border-radius: 8px; font-size: 1rem; }
 table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; font-size: 0.92rem; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 th, td { text-align: left; padding: 0.55rem 0.6rem; border-bottom: 1px solid #8883; }
 th { cursor: pointer; user-select: none; white-space: nowrap; }
 th:hover { text-decoration: underline; }
@@ -86,6 +94,7 @@ sigil scan ./my-server --sign --publish</pre>
     </select>
     <span id="showing"></span>
   </div>
+  <div class="table-wrap">
   <table id="badges" aria-label="Indexed trust badges">
     <thead>
       <tr>
@@ -743,6 +752,7 @@ sigil scan ./my-server --sign --publish</pre>
 <!-- BADGES:END -->
     </tbody>
   </table>
+  </div>
 </main>
 
 <div id="detail" role="dialog" aria-modal="true" aria-label="Badge detail">
@@ -850,8 +860,15 @@ sigil scan ./my-server --sign --publish</pre>
       '<p><a class="btn" href="' + esc(rawUrl) + '" download>Download badge JSON</a>' +
       '<button class="btn" id="copy-verify">Copy verify commands</button></p>';
     document.getElementById("copy-verify").addEventListener("click", function () {
+      var btn = document.getElementById("copy-verify");
       var txt = "curl -sL " + rawUrl + " -o badge.json\nsigil verify badge.json";
-      if (navigator.clipboard) navigator.clipboard.writeText(txt);
+      function done(ok) {
+        btn.textContent = ok ? "Copied!" : "Copy failed";
+        setTimeout(function () { btn.textContent = "Copy verify commands"; }, 1600);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(txt).then(function () { done(true); }, function () { done(false); });
+      } else { done(false); }
     });
     detailEl.classList.add("open");
   }
@@ -861,6 +878,11 @@ sigil scan ./my-server --sign --publish</pre>
   });
   document.getElementById("detail-close").addEventListener("click", function () {
     detailEl.classList.remove("open");
+  });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key === "Escape" && detailEl.classList.contains("open")) {
+      detailEl.classList.remove("open");
+    }
   });
   detailEl.addEventListener("click", function (ev) {
     if (ev.target === detailEl) detailEl.classList.remove("open");
