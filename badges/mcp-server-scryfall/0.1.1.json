@@ -1,0 +1,32 @@
+{
+  "type": "sigil-badge/v1",
+  "server": "mcp-server/scryfall",
+  "version": "0.1.1",
+  "riskScore": 89,
+  "riskLevel": "medium",
+  "scores": {
+    "mcp.schemaQuality": 93,
+    "mcp.robustness": 100,
+    "mcp.conformance": 96
+  },
+  "findingCounts": {
+    "critical": 0,
+    "major": 0,
+    "minor": 1,
+    "info": 7
+  },
+  "evalHash": "ca62c9700e791af160da1f941a9697e6e632d070ec732da266228392ef109ba4",
+  "keyId": "ac22e8d7e54463b7",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "uiN22n7I1Xe84cVLawFhOd5sc9iVWMApfuADBqyJAV0",
+    "kty": "OKP"
+  },
+  "issuedAt": "2026-10-08T21:30:37.036Z",
+  "artifact": {
+    "type": "npm",
+    "spec": "scryfall-mcp-server@0.1.1",
+    "integrity": "sha512-nnDI1UIv53pM8SL/j7MGn1Om04hODMEmzUISk5OUDvBcOsuZvlBBWzSJNoplJO0/0BeU0LrbszhGbAlDY1s5Sw=="
+  },
+  "signature": "i2hjmPMo4BFMCFzQ3eylgbK06HMZOLY4dj699Rp8ytwAzEJHr2Oh+EheDIKMeACGgO5fdwqIpvWtJAo9SRbtCg=="
+}

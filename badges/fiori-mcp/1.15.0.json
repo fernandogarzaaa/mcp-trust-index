@@ -1,0 +1,32 @@
+{
+  "type": "sigil-badge/v1",
+  "server": "fiori-mcp",
+  "version": "1.15.0",
+  "riskScore": 10,
+  "riskLevel": "high",
+  "scores": {
+    "mcp.schemaQuality": 98,
+    "mcp.robustness": 24,
+    "mcp.conformance": 88
+  },
+  "findingCounts": {
+    "critical": 0,
+    "major": 6,
+    "minor": 4,
+    "info": 2
+  },
+  "evalHash": "2695c08a76f2518ad503c976509fce9db7ea6c705e7ee711e46e64dad9125d5d",
+  "keyId": "ac22e8d7e54463b7",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "uiN22n7I1Xe84cVLawFhOd5sc9iVWMApfuADBqyJAV0",
+    "kty": "OKP"
+  },
+  "issuedAt": "2026-10-04T21:31:16.292Z",
+  "artifact": {
+    "type": "npm",
+    "spec": "@sap-ux/fiori-mcp-server@1.15.0",
+    "integrity": "sha512-nyukc2JT6Tm19X8yd/zyoKk/ICWB8MfIU7QU2soPQ1ELiSEskHqISS8J50TSpGDAQ6hKupZkzNZgzP9nrTpoyA=="
+  },
+  "signature": "2YkPrNq1rFSfp5Pe9yoVGgBjDGvJ+KLapdpuMxlaLm5D67VMIjbAzdH7vasU/EzaYAuJPxQTFoPdzTdVWdCdDA=="
+}
