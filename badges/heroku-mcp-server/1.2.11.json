@@ -1,0 +1,32 @@
+{
+  "type": "sigil-badge/v1",
+  "server": "Heroku MCP Server",
+  "version": "1.2.11",
+  "riskScore": 0,
+  "riskLevel": "high",
+  "scores": {
+    "mcp.schemaQuality": 67,
+    "mcp.robustness": 0,
+    "mcp.conformance": 96
+  },
+  "findingCounts": {
+    "critical": 0,
+    "major": 65,
+    "minor": 1,
+    "info": 33
+  },
+  "evalHash": "c47a06f1d498efba2b6a9e4b8be4e54b5556b660480c4ccb756d9c02be7f7efe",
+  "keyId": "ac22e8d7e54463b7",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "uiN22n7I1Xe84cVLawFhOd5sc9iVWMApfuADBqyJAV0",
+    "kty": "OKP"
+  },
+  "issuedAt": "2026-10-07T21:39:03.074Z",
+  "artifact": {
+    "type": "npm",
+    "spec": "@heroku/mcp-server@1.2.11",
+    "integrity": "sha512-2eM+wkowSHeg9YPPFwhvQ7/bK0UqSob4ItRgGlBEWwGIVa5Hq6ut3lTrM7rUJHBa4vkM7GAPhQVuN0M5fjqabQ=="
+  },
+  "signature": "ch7qxvWpQJ+BDfehxdWgGoYqJY6PEJOc1IqWTIgTSlQaGQIkkCbad0n4/BmXStr2KXFzgK0tdl+uIk8zpFTmCg=="
+}
