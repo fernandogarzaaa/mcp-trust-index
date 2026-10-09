@@ -1,0 +1,13 @@
+{
+  "name": "sigil-index",
+  "private": true,
+  "description": "Public, git-backed index of signed Sigil trust badges for MCP servers.",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "build": "node scripts/build-site.mjs",
+    "validate": "node scripts/validate.mjs --base origin/main"
+  }
+}
