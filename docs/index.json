@@ -1,5 +1,5 @@
 {
-  "count": 49,
+  "count": 53,
   "badges": [
     {
       "server": "@apify/actors-mcp-server",
@@ -88,6 +88,28 @@
       },
       "path": "badges/apify-actors-mcp-server/0.17.1.json",
       "status": "superseded"
+    },
+    {
+      "server": "@browserstack/mcp-server",
+      "version": "2.1.0",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-04T21:25:24.619Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@browserstack/mcp-server@2.1.0",
+        "integrity": "sha512-BiZswthjYuK+2idnDElnq60hU41MBwGMs8wo4RTNFfpmaBX7z/4kf2vFOy0eKY+18pIDX4oXSKWblhQwdAlf3A=="
+      },
+      "path": "badges/browserstack-mcp-server/2.1.0.json",
+      "status": "active"
     },
     {
       "server": "@hubspot/mcp-server",
@@ -544,6 +566,28 @@
       "status": "active"
     },
     {
+      "server": "@transcend-io/mcp-server-assessment",
+      "version": "2.1.13",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-04T21:33:12.675Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@transcend-io/mcp-server-assessment@2.1.13",
+        "integrity": "sha512-M/mxssL/bG4UPO8SoYBKsCL4t/UOEfU2sBlvVFvEa1XBUFVc7NjvW6YjAOV9UkIF8xR3+FBCnksAgx7v9chyBQ=="
+      },
+      "path": "badges/transcend-io-mcp-server-assessment/2.1.13.json",
+      "status": "active"
+    },
+    {
       "server": "@transcend-io/mcp-server-base",
       "version": "2.5.4",
       "riskScore": 100,
@@ -673,6 +717,28 @@
         "integrity": "sha512-7vI8KnIswGPDBSm9umrcwa6SVOr34gwnFPg5lbxhSYJwnewhFhjdWgcNDXCHymM14AtpOfUfUWGMc0kd5Lj/Jg=="
       },
       "path": "badges/transcend-io-mcp-server-preferences/0.7.20.json",
+      "status": "active"
+    },
+    {
+      "server": "@transcend-io/mcp-server-workflows",
+      "version": "1.0.16",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-04T21:32:50.349Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@transcend-io/mcp-server-workflows@1.0.16",
+        "integrity": "sha512-loyN54Lp3qaxzVWT6u6neMMAuHaVfMzca0RWnvM51nLhNppcsLMX/W9zqS78hpfOYiTlDb97dxeviQxZZwlUsQ=="
+      },
+      "path": "badges/transcend-io-mcp-server-workflows/1.0.16.json",
       "status": "active"
     },
     {
@@ -817,6 +883,32 @@
         "integrity": "sha512-3GUZAfhg+uL5aAHwNO2TC6q9PNz7FDoDMbxXkoVga26paBGqZveja4SEEbfhNarBww4QLXFwzlDfbx8EwNX85g=="
       },
       "path": "badges/exa-mcp/0.0.7.json",
+      "status": "active"
+    },
+    {
+      "server": "fiori-mcp",
+      "version": "1.15.0",
+      "riskScore": 10,
+      "riskLevel": "high",
+      "scores": {
+        "mcp.schemaQuality": 98,
+        "mcp.robustness": 24,
+        "mcp.conformance": 88
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 6,
+        "minor": 4,
+        "info": 2
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-04T21:31:16.292Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@sap-ux/fiori-mcp-server@1.15.0",
+        "integrity": "sha512-nyukc2JT6Tm19X8yd/zyoKk/ICWB8MfIU7QU2soPQ1ELiSEskHqISS8J50TSpGDAQ6hKupZkzNZgzP9nrTpoyA=="
+      },
+      "path": "badges/fiori-mcp/1.15.0.json",
       "status": "active"
     },
     {
