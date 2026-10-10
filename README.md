@@ -2,6 +2,17 @@
 
 A public, git-backed index of signed trust badges for MCP servers. Badges are emitted by [`sigil`](https://github.com/fernandogarzaaa/sigil) (the Sigil CLI) and live here at `badges/<server>/<version>.json`. The browsable site is at <https://fernandogarzaaa.github.io/sigil-index/>.
 
+## Get the `sigil` CLI
+
+Every `sigil ...` command below comes from the Sigil CLI, published on npm as **`sigil-mcp`** (the bare `sigil` package name on npm is unrelated/unpublished):
+
+```bash
+npm install -g sigil-mcp      # Node >= 20; installs the `sigil` command
+sigil --help
+# or without a global install:
+npx -y -p sigil-mcp sigil pin @upstash/context7-mcp
+```
+
 ## What a badge is
 
 A badge is a JSON document binding a scan result to an exact server version and a signer:
@@ -85,7 +96,19 @@ You can also open a PR by hand: add `badges/<server>/<version>.json` with a vali
 
 ## How the site stays current
 
-On every push to `main` that touches `badges/` or `revocations/`, CI regenerates `docs/index.json` (the machine-readable manifest, including each badge's `status` and install `artifact`) and the static badge table in `docs/index.html`, then serves it via GitHub Pages. The page's search, sort, filter, and detail views run entirely client-side.
+`docs/index.json` (the machine-readable manifest, including each badge's `status` and install `artifact`) and the static badge table in `docs/index.html` are derived files, served via GitHub Pages. Branch protection stops a bot from rebuilding them on `main`, so **the PR author rebuilds them**: run `node scripts/build-site.mjs` (or `npm run build`) after adding a badge or revocation and commit the result. The `Check index freshness` workflow fails any PR whose derived files are stale. The page's search, sort, filter, and detail views run entirely client-side.
+
+## Checking the index locally
+
+No dependencies; Node >= 20 and git are all you need.
+
+```bash
+git clone https://github.com/fernandogarzaaa/sigil-index && cd sigil-index
+npm test                     # verifies every badge + revocation signature, tamper rejection, and site freshness
+npm run validate             # what PR CI runs: validates files your branch adds vs origin/main
+node scripts/validate.mjs --base origin/main --files badges/my-server/1.2.3.json   # one file
+npm run build                # regenerate docs/index.json + docs/index.html
+```
 
 ## Installing a verified version
 
