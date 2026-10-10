@@ -1,0 +1,32 @@
+{
+  "type": "sigil-badge/v1",
+  "server": "duckduckgo-mcp-server",
+  "version": "0.6.0",
+  "riskScore": 94,
+  "riskLevel": "low",
+  "scores": {
+    "mcp.schemaQuality": 98,
+    "mcp.robustness": 100,
+    "mcp.conformance": 96
+  },
+  "findingCounts": {
+    "critical": 0,
+    "major": 0,
+    "minor": 1,
+    "info": 2
+  },
+  "evalHash": "9d5566cd352ab1802d1a16ef44cd7c956ff2c355ae14c75e083c899b4721bd10",
+  "keyId": "ac22e8d7e54463b7",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "uiN22n7I1Xe84cVLawFhOd5sc9iVWMApfuADBqyJAV0",
+    "kty": "OKP"
+  },
+  "issuedAt": "2026-10-10T21:29:05.396Z",
+  "artifact": {
+    "type": "npm",
+    "spec": "@ericthered926/duckduckgo-mcp-server@0.6.0",
+    "integrity": "sha512-KIF3h+WXncB5+H93YWp9YSRzWY9C1qsF2J+SG2F2XXm7SoWKffvtVzQ4P+0D4cgmgCKjoPiVH5HirCc2bWTPEg=="
+  },
+  "signature": "/FXbknvLZAJr0Iros/5hmArlRLcD8vDISVDjG50AF1yO+hXzegb0K+UZs8/RcpPDZP1o/Iq24iK3iQ4iRcYnCQ=="
+}
