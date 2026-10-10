@@ -1,5 +1,5 @@
 {
-  "count": 59,
+  "count": 63,
   "badges": [
     {
       "server": "@apify/actors-mcp-server",
@@ -610,6 +610,28 @@
       "status": "active"
     },
     {
+      "server": "@supabase/mcp-server-supabase",
+      "version": "0.13.0",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-10T21:28:12.436Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@supabase/mcp-server-supabase@0.13.0",
+        "integrity": "sha512-TUzlt0x9eADZgUOz/5wWk95i5GVf1QSnIwYX0jmasNNmoqPxEkAgO/kg8aAQTqmYZx/OPlVlaX3Er5v/le1z2g=="
+      },
+      "path": "badges/supabase-mcp-server-supabase/0.13.0.json",
+      "status": "active"
+    },
+    {
       "server": "@transcend-io/mcp-server-admin",
       "version": "1.1.3",
       "riskScore": 100,
@@ -900,6 +922,28 @@
       "status": "active"
     },
     {
+      "server": "@xeroapi/xero-mcp-server",
+      "version": "0.0.17",
+      "riskScore": 100,
+      "riskLevel": "low",
+      "scores": null,
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "info": 0
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-10T21:30:33.637Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@xeroapi/xero-mcp-server@0.0.17",
+        "integrity": "sha512-5i11VORUgqnMcrP4HDWFEcejR/r2mxXTvAtw6MZ+iQa+CfmPPfktvUekxGrOyBskuoIdX3hAVOAX6bbbEP+W4w=="
+      },
+      "path": "badges/xeroapi-xero-mcp-server/0.0.17.json",
+      "status": "active"
+    },
+    {
       "server": "@zencoderai/slack-mcp-server",
       "version": "0.0.1",
       "riskScore": 100,
@@ -919,6 +963,32 @@
         "integrity": "sha512-D+gC+uD1k3mLHkPESvHX9y22IwFhk1pi9m5JT/qy4Bt7QWAXf8iDSKcBF6q5B++IETnRrUzq4RVIgBC2e5k37Q=="
       },
       "path": "badges/zencoderai-slack-mcp-server/0.0.1.json",
+      "status": "active"
+    },
+    {
+      "server": "Aikido MCP Server",
+      "version": "1.0.28",
+      "riskScore": 93,
+      "riskLevel": "low",
+      "scores": {
+        "mcp.schemaQuality": 97,
+        "mcp.robustness": 100,
+        "mcp.conformance": 96
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 1,
+        "info": 3
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-10T21:27:08.754Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@aikidosec/mcp@1.0.28",
+        "integrity": "sha512-B9z6FXamQazY/RVxm0T5aJBqOOvGy/wb8/7ktn6rXJcutd33ovVEj5ODg2L/HQp5E8UQMzTkFHY19ius1AtPwA=="
+      },
+      "path": "badges/aikido-mcp-server/1.0.28.json",
       "status": "active"
     },
     {
@@ -998,6 +1068,32 @@
       },
       "path": "badges/context7/4.2.0.json",
       "status": "superseded"
+    },
+    {
+      "server": "duckduckgo-mcp-server",
+      "version": "0.6.0",
+      "riskScore": 94,
+      "riskLevel": "low",
+      "scores": {
+        "mcp.schemaQuality": 98,
+        "mcp.robustness": 100,
+        "mcp.conformance": 96
+      },
+      "findingCounts": {
+        "critical": 0,
+        "major": 0,
+        "minor": 1,
+        "info": 2
+      },
+      "keyId": "ac22e8d7e54463b7",
+      "issuedAt": "2026-10-10T21:29:05.396Z",
+      "artifact": {
+        "type": "npm",
+        "spec": "@ericthered926/duckduckgo-mcp-server@0.6.0",
+        "integrity": "sha512-KIF3h+WXncB5+H93YWp9YSRzWY9C1qsF2J+SG2F2XXm7SoWKffvtVzQ4P+0D4cgmgCKjoPiVH5HirCc2bWTPEg=="
+      },
+      "path": "badges/duckduckgo-mcp-server/0.6.0.json",
+      "status": "active"
     },
     {
       "server": "exa-mcp",
