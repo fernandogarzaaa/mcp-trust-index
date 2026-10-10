@@ -1,0 +1,32 @@
+{
+  "type": "sigil-badge/v1",
+  "server": "Aikido MCP Server",
+  "version": "1.0.28",
+  "riskScore": 93,
+  "riskLevel": "low",
+  "scores": {
+    "mcp.schemaQuality": 97,
+    "mcp.robustness": 100,
+    "mcp.conformance": 96
+  },
+  "findingCounts": {
+    "critical": 0,
+    "major": 0,
+    "minor": 1,
+    "info": 3
+  },
+  "evalHash": "76a8d6df1ca28c8694176516cf199dfc08a6cdc5d2689a5f8cda9a192cbce452",
+  "keyId": "ac22e8d7e54463b7",
+  "publicKey": {
+    "crv": "Ed25519",
+    "x": "uiN22n7I1Xe84cVLawFhOd5sc9iVWMApfuADBqyJAV0",
+    "kty": "OKP"
+  },
+  "issuedAt": "2026-10-10T21:27:08.754Z",
+  "artifact": {
+    "type": "npm",
+    "spec": "@aikidosec/mcp@1.0.28",
+    "integrity": "sha512-B9z6FXamQazY/RVxm0T5aJBqOOvGy/wb8/7ktn6rXJcutd33ovVEj5ODg2L/HQp5E8UQMzTkFHY19ius1AtPwA=="
+  },
+  "signature": "WCy1B+TRlvuzT7JvtKCq6Z9+gtIoUYWIV4ZgnQQCaqUl7AbKwyNTytRE0Cil4WWJM4i8amFuL94GUhsum0lSDQ=="
+}
